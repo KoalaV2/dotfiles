@@ -61,7 +61,7 @@ output * bg /home/koala/Pictures/void_logo.png fill
 
     # Start your launcher
     bindsym $mod+d exec $menu
-    bindsym $mod+escape exec swaylock -c 000000
+    bindsym $mod+escape exec swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 2 --fade-in 0.2
     bindsym Print exec grim -g "$(slurp -d)" - | wl-copy -t image/png
     bindsym $mod+Home exec pkill waybar && waybar
     bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
