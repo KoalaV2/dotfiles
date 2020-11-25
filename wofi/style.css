@@ -6,8 +6,8 @@ background-color: #ebdbb2;
 
 #input {
 margin: 5px;
-border: 2px solid 282828;
-background-color: 282828;
+border: 2px solid #282828;
+background-color: #282828;
 }
 
 #inner-box {
@@ -31,9 +31,12 @@ background-color: #282828;
 #text {
 margin: 5px;
 border: 2px #282828;
-
+color: #ebdbb2;
 }  
  #entry:selected {
 background-color: #ebdbb2;
-color:  #282828;
 }
+#text:selected {
+color: #282828;
+}
+ 
