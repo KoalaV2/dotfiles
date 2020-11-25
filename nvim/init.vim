@@ -12,6 +12,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'frazrepo/vim-rainbow'
 Plug 'preservim/nerdcommenter'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 call plug#end()
 let g:lightline = {}
 let g:lightline.colorscheme = 'gruvbox'
