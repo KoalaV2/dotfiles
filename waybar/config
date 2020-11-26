@@ -3,7 +3,7 @@
     "height": 25,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "network","temperature","cpu", "backlight", "battery", "clock", "tray"],
+    "modules-right": ["idle_inhibitor", "pulseaudio", "network","temperature","cpu", "backlight", "battery", "clock"],
     // Modules configuration
     "sway/workspaces": {
         "disable-scroll": true,
