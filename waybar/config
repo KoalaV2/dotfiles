@@ -3,7 +3,7 @@
     "height": 25,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "network","temperature","cpu", "backlight", "battery", "clock"],
+    "modules-right": ["idle_inhibitor", "pulseaudio", "network","temperature", "backlight", "battery", "clock"],
     // Modules configuration
     "sway/workspaces": {
         "disable-scroll": true,
@@ -82,7 +82,7 @@
     "network": {
     	"format": "{ifname}",
 	"format-ethernet": "{ifname}",
-        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-wifi": "{essid} ",
         "format-linked": "{ifname} (No IP) ",
        	"format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
