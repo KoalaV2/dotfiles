@@ -1,6 +1,13 @@
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
+
+if [ "$(tty)" = "/dev/tty1" ]; then
+	dbus-run-session sway
+fi
+
+
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/koala/.oh-my-zsh"
 export ZSH_CUSTOM="/home/koala/.zsh"
@@ -26,12 +33,11 @@ else
 fi
 
 # Example aliases
-alias ls='exa --icons --color=auto'
+alias ls='exa --icons --color=auto --group-directories-first'
 alias cat='bat'
 alias open='xdg-open'
 alias vim='nvim'
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /home/koala/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
