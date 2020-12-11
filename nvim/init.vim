@@ -13,9 +13,12 @@ Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'frazrepo/vim-rainbow'
 Plug 'preservim/nerdcommenter'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'jiangmiao/auto-pairs'
+Plug 'machakann/vim-sandwich'
 call plug#end()
 let g:lightline = {}
 let g:lightline.colorscheme = 'gruvbox'
 filetype plugin on
 map <C-a> :NERDTreeToggle<CR>
 map <C-s> :w<CR>
+
