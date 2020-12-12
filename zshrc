@@ -1,5 +1,6 @@
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$PATH:/opt/flutter/bin"
 
 
 if [ "$(tty)" = "/dev/tty1" ]; then
