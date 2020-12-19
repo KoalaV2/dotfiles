@@ -19,6 +19,7 @@ call plug#end()
 let g:lightline = {}
 let g:lightline.colorscheme = 'gruvbox'
 filetype plugin on
+set undofile
 map <C-a> :NERDTreeToggle<CR>
 map <C-s> :w<CR>
 
