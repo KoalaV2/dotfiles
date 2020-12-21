@@ -15,6 +15,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'machakann/vim-sandwich'
+Plug 'ervandew/supertab'
 call plug#end()
 let g:lightline = {}
 let g:lightline.colorscheme = 'gruvbox'
