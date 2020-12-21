@@ -16,9 +16,11 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'machakann/vim-sandwich'
 Plug 'ervandew/supertab'
+Plug 'oblitum/rainbow'
 call plug#end()
 let g:lightline = {}
 let g:lightline.colorscheme = 'gruvbox'
+let g:rainbow_active = 1
 filetype plugin on
 set undofile
 map <C-a> :NERDTreeToggle<CR>
