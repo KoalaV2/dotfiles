@@ -1,7 +1,7 @@
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:/opt/flutter/bin"
-
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 if [ "$(tty)" = "/dev/tty1" ]; then
 	dbus-run-session sway

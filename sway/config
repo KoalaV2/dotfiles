@@ -201,7 +201,7 @@ bindsym $mod+r mode "resize"
 exec pulseaudio -D 
 exec udiskie & 
 exec waybar
- 
+exec wlsunset -l 59.2 -L 17.7 & 
 default_border pixel 2
 smart_gaps on
 gaps inner 10 
