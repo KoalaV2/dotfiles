@@ -21,7 +21,7 @@ ENABLE_CORRECTION="true"
 
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(git colorize pip sudo  zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git colorize pip sudo)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -41,4 +41,4 @@ alias vim='nvim'
 
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /home/koala/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
