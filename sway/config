@@ -27,7 +27,7 @@ output eDP-1 {
 	adaptive_sync off
 }
 output HDMI-A-2 {
-	pos 1680 0
+	pos 1920 0
 	resolution 1680x1050
 	adaptive_sync off
 }
