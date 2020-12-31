@@ -26,6 +26,11 @@ output eDP-1 {
 	resolution 1920x1080
 	adaptive_sync off
 }
+output HDMI-A-2 {
+	pos 1680 0
+	resolution 1680x1050
+	adaptive_sync off
+}
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
