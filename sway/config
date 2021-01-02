@@ -34,7 +34,7 @@ output HDMI-A-2 {
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/koala/Pictures/void_logo.png fill
+output * bg /home/koala/Pictures/gruvbox_rocket.jpg fill
 #
 # Example configuration:
 #
