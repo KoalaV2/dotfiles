@@ -1,6 +1,7 @@
 set number
 set autoindent
 set showcmd
+set relativenumber
 let mapleader = ","
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
