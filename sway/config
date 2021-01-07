@@ -206,6 +206,7 @@ exec pulseaudio -D
 exec udiskie & 
 exec waybar
 exec wlsunset -l 59.2 -L 17.7 & 
+exec kdeconnect-cli -d 686e98ad04425e5b --pair &
 default_border pixel 2
 smart_gaps on
 gaps inner 10 
