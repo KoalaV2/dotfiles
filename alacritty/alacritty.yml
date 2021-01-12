@@ -20,6 +20,7 @@ font:
     #family: terminus
     #family: scientifica
     #family: Misc Tamsyn
+    family: JetBrains Mono
     style: Regular
   bold:
     #family: xos4 Terminus
