@@ -2,6 +2,7 @@ window {
 margin: 5px;
 border: 2px solid #ebdbb2;
 background-color: #ebdbb2;
+font-family: JetBrains Mono;
 }
 
 #input {
