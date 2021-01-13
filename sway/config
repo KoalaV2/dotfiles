@@ -44,9 +44,10 @@ output * bg /home/koala/Pictures/archpc_gruvbox.png fill
 
 ### Idle configuration
 #
-# Example configuration:
-#
-exec swayidle timeout 15 'brightnessctl --device="tpacpi::kbd_backlight" set 0' resume 'brightnessctl --device="tpacpi::kbd_backlight" set 2' timeout 510 'brightnessctl -s && brightnessctl set 5%' resume 'brightnessctl -r' timeout 510 'notify-send "Locking screen in 30 seconds..."' timeout 540 'swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000  --fade-in 0.2' timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' timeout 900 'systemctl suspend'
+# KEYBOARD BACKLIGHT
+# timeout 15 'brightnessctl --device="tpacpi::kbd_backlight" set 0' resume 'brightnessctl --device="tpacpi::kbd_backlight" set 2'
+
+exec swayidle timeout 510 'brightnessctl -s && brightnessctl set 5%' resume 'brightnessctl -r' timeout 510 'notify-send "Locking screen in 30 seconds..."' timeout 540 'swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000  --fade-in 0.2' timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' timeout 900 'systemctl suspend'
 
 #           before-sleep 'swaylock -f -c 000000'
 #
