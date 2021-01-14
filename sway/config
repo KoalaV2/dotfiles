@@ -203,16 +203,18 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
-exec pulseaudio -D 
-exec udiskie & 
-exec waybar
-exec wlsunset -l 59.2 -L 17.7 & 
-exec kdeconnect-cli -d 686e98ad04425e5b --pair &
 default_border pixel 2
 smart_gaps on
 gaps inner 10 
 gaps outer -10
 xwayland enable
+exec pulseaudio -D 
+exec udiskie & 
+exec waybar
+exec wlsunset -l 59.2 -L 17.7 & 
+exec kdeconnect-cli -d 686e98ad04425e5b --pair &
+exec /usr/lib/xdg-desktop-portal-wlr --output=eDP-1
+exec /usr/lib/xdg-desktop-portal -r
 include /etc/sway/config.d/*
 
 client.focused #ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2
