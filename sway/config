@@ -83,6 +83,7 @@ exec swayidle timeout 510 'brightnessctl -s && brightnessctl set 5%' resume 'bri
     bindsym XF86AudioPlay exec playerctl play-pause
     bindsym XF86AudioNext exec playerctl next
     bindsym XF86AudioPrev exec playerctl previous
+    bindsym XF86Bluetooth exec /home/koala/.local/bin/togglebluetooth
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
