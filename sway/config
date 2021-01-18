@@ -217,7 +217,7 @@ exec kdeconnect-cli -d 686e98ad04425e5b --pair &
 exec /usr/lib/xdg-desktop-portal-wlr --output=eDP-1
 exec /usr/lib/xdg-desktop-portal -r
 exec systemctl --user start thinkpadbacklight.service
-exec systemctl --user start tihnkpadbacklight-restart.timer
+exec systemctl --user start thinkpadbacklight-restart.timer
 include /etc/sway/config.d/*
 
 client.focused #ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2
