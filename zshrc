@@ -39,7 +39,7 @@ alias ls='exa --icons --color=auto --group-directories-first'
 alias cat='bat'
 alias open='xdg-open'
 alias vim='nvim'
-
+alias wttr='curl https://wttr.in/\~Soedertalje\?0m'
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
