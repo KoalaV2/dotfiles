@@ -2,6 +2,7 @@ export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:/opt/flutter/bin"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.scripts:$PATH"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export GTK_THEME=Gruvbox-Material-Dark
 if [ "$(tty)" = "/dev/tty1" ]; then
@@ -40,6 +41,8 @@ alias cat='bat'
 alias open='xdg-open'
 alias vim='nvim'
 alias wttr='curl https://wttr.in/\~Soedertalje\?0m'
+alias rm='rmtrash'
+alias rmdir'rmdirtrash'
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
