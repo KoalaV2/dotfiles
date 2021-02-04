@@ -92,6 +92,7 @@ exec swayidle timeout 510 'brightnessctl -s && brightnessctl set 5%' resume 'bri
     bindsym XF86AudioPrev exec playerctl previous
     bindsym XF86Bluetooth exec /bin/bash /home/koala/.local/bin/togglebluetooth
     bindsym XF86Display exec /bin/sh /home/koala/.local/bin/mirrordisplay
+    bindsym $mod+Shift+S exec /home/koala/.scripts/gettimecli -c 20_el_a | wofi --show dmenu
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -217,6 +218,8 @@ smart_gaps on
 gaps inner 10 
 gaps outer -10
 xwayland enable
+exec autotiling &
+exec lxsession & 
 exec pulseaudio -D 
 exec udiskie & 
 exec waybar
