@@ -2,6 +2,7 @@ set number
 set autoindent
 set showcmd
 set relativenumber
+colorscheme gruvbox
 let mapleader = ","
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
