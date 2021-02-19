@@ -3,6 +3,7 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:/opt/flutter/bin"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.scripts:$PATH"
+export TERM=xterm-256color
 export _JAVA_AWT_WM_NONREPARENTING=1
 export GTK_THEME=Gruvbox-Material-Dark
 if [ "$(tty)" = "/dev/tty1" ]; then

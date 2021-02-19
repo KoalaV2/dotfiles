@@ -7,7 +7,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term alacritty
+set $term kitty
 
 set $menu wofi --show drun
 
@@ -90,7 +90,7 @@ exec swayidle timeout 510 'brightnessctl -s && brightnessctl set 5%' resume 'bri
     bindsym XF86AudioPlay exec playerctl play-pause
     bindsym XF86AudioNext exec playerctl next
     bindsym XF86AudioPrev exec playerctl previous
-    bindsym XF86Bluetooth exec /bin/bash /home/koala/.local/bin/togglebluetooth
+    bindsym XF86Bluetooth exec echo "power on" | bluetoothctl
     bindsym XF86Display exec /bin/sh /home/koala/.local/bin/mirrordisplay
     bindsym $mod+S exec /home/koala/.scripts/gettimecli -c 20_el_a | wofi --show dmenu
     # Drag floating windows by holding down $mod and left mouse button.
@@ -234,3 +234,8 @@ include /etc/sway/config.d/*
 client.focused #ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2
 client.unfocused #453a3a #453a3a #453a3a #453a3a #453a3a 
 client.focused_inactive #453a3a #453a3a #453a3a #453a3a #453a3a
+
+border_images.focused /home/koala/.config/sway/shadows.png
+border_images.unfocused /home/koala/.config/sway/shadows.png
+border_images.focused_inactive /home/koala/.config/sway/shadows.png
+border_images.urgent /home/koala/.config/sway/shadows.png
