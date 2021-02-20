@@ -218,6 +218,7 @@ smart_gaps on
 gaps inner 10 
 gaps outer -10
 xwayland enable
+exec mako & 
 exec autotiling &
 exec lxsession & 
 exec pulseaudio -D 
