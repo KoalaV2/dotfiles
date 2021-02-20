@@ -218,7 +218,6 @@ smart_gaps on
 gaps inner 10 
 gaps outer -10
 xwayland enable
-exec mako & 
 exec autotiling &
 exec lxsession & 
 exec pulseaudio -D 
@@ -235,8 +234,3 @@ include /etc/sway/config.d/*
 client.focused #ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2
 client.unfocused #453a3a #453a3a #453a3a #453a3a #453a3a 
 client.focused_inactive #453a3a #453a3a #453a3a #453a3a #453a3a
-
-border_images.focused /home/koala/.config/sway/shadows.png
-border_images.unfocused /home/koala/.config/sway/shadows.png
-border_images.focused_inactive /home/koala/.config/sway/shadows.png
-border_images.urgent /home/koala/.config/sway/shadows.png
