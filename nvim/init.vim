@@ -25,7 +25,8 @@ let g:rainbow_active = 1
 filetype plugin on
 set undofile
 map <C-s> :w<CR>
-map <C-j> :GFiles<CR>
+nnoremap <C-j> :GFiles<CR>
+nnoremap <C-k> :GFiles?<CR>
 nnoremap <leader>h :wincmd h<cr>
 nnoremap <leader>j :wincmd j<cr>
 nnoremap <leader>k :wincmd k<cr>
