@@ -3,7 +3,7 @@ set autoindent
 set showcmd
 set relativenumber
 colorscheme gruvbox
-let mapleader = ","
+let mapleader = " "
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
@@ -27,4 +27,4 @@ filetype plugin on
 set undofile
 map <C-a> :NERDTreeToggle<CR>
 map <C-s> :w<CR>
-
+map <C-j> :GFiles<CR>
