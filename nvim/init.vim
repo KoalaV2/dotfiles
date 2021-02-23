@@ -6,7 +6,6 @@ colorscheme gruvbox
 let mapleader = " "
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
@@ -25,6 +24,10 @@ let g:lightline.colorscheme = 'gruvbox'
 let g:rainbow_active = 1
 filetype plugin on
 set undofile
-map <C-a> :NERDTreeToggle<CR>
 map <C-s> :w<CR>
 map <C-j> :GFiles<CR>
+nnoremap <leader>h :wincmd h<cr>
+nnoremap <leader>j :wincmd j<cr>
+nnoremap <leader>k :wincmd k<cr>
+nnoremap <leader>l :wincmd l<cr>
+nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<cr>
