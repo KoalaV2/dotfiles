@@ -42,6 +42,7 @@ output HDMI-A-2 {
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg /home/koala/Pictures/archpc_gruvbox.png fill
+#output * bg /home/koala/Pictures/wierdthings.jpg fill
 #
 # Example configuration:
 #
@@ -217,6 +218,8 @@ default_border pixel 2
 smart_gaps on
 gaps inner 10 
 gaps outer -10
+gaps bottom 1
+gaps top 1
 xwayland enable
 exec autotiling &
 exec lxsession & 
@@ -234,3 +237,4 @@ include /etc/sway/config.d/*
 client.focused #ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2
 client.unfocused #453a3a #453a3a #453a3a #453a3a #453a3a 
 client.focused_inactive #453a3a #453a3a #453a3a #453a3a #453a3a
+
