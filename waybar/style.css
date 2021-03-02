@@ -32,6 +32,7 @@ window#waybar.solo {
 #workspaces button {
     padding: 0 5px;
     color: #ebdbb2;
+    border-radius: 5px;
     /* background-color: transparent; 
     border-bottom: 3px solid transparent;
     */
@@ -42,12 +43,14 @@ window#waybar.solo {
     background: rgba(0, 0, 0, 0.2);
     box-shadow: inherit;
     border-bottom: none;
+    border-radius: 5px;
 }
 
 #workspaces button.focused {
     background-color: #ebdbb2;
     color: #282828;
     border-bottom: none;
+    border-radius: 5px;
 }
 
 #workspaces button.urgent {
@@ -140,6 +143,7 @@ label:focus {
 #pulseaudio {
     background-color: #ebdbb2;
     color: #000000;
+    border-radius: 5px 0px 0px 5px;
 }
 
 #pulseaudio.muted {
