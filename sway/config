@@ -41,7 +41,7 @@ output HDMI-A-2 {
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/koala/Pictures/archpc_gruvbox.png fill
+output * bg /home/theo/Pictures/archpc_gruvbox.png fill
 #output * bg /home/koala/Pictures/wierdthings.jpg fill
 #
 # Example configuration:
@@ -92,8 +92,8 @@ exec swayidle timeout 510 'brightnessctl -s && brightnessctl set 5%' resume 'bri
     bindsym XF86AudioNext exec playerctl next
     bindsym XF86AudioPrev exec playerctl previous
     bindsym XF86Bluetooth exec echo "power on" | bluetoothctl
-    bindsym XF86Display exec /bin/sh /home/koala/.local/bin/mirrordisplay
-    bindsym $mod+S exec /home/koala/.scripts/gettimecli -c 20_el_a | wofi --show dmenu
+    bindsym XF86Display exec /bin/sh /home/theo/.local/bin/mirrordisplay
+    bindsym $mod+S exec /home/theo/.scripts/gettimecli -c 20_el_a | wofi --show dmenu
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
