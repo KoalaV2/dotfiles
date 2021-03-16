@@ -9,8 +9,8 @@ set $right l
 # Your preferred terminal emulator
 set $term kitty
 
-set $menu wofi --show drun
-
+#set $menu wofi --show drun
+set $menu dmenu_run
 input "1267:32:Elan_Touchpad" {
 	tap enabled
 	drag enabled
@@ -26,7 +26,7 @@ seat seat0 xcursor_theme default
 # BLUR
 # grim /tmp/screen.png; corrupter /tmp/screen.png /tmp/screen.png; swaylock -fi /tmp/screen.png --effect-vignette 0.5:0.5 --clock --indicator --indicator-radius 100 --indicator-thickness 7  --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 2 --fade-in 0.2; 
 
-bindswitch lid:on exec 'grim /tmp/screen.png; corrupter /tmp/screen.png /tmp/screen.png; swaylock -fi /tmp/screen.png --effect-vignette 0.5:0.5 --clock --indicator-radius 100 --indicator-thickness 7  --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 2 --fade-in 0.2'
+bindswitch lid:on exec 'grim /tmp/screen.png; corrupter /tmp/screen.png /tmp/screen.png; swaylock -fi /tmp/screen.png --effect-vignette 0.5:0.5 --clock --indicator-radius 100 --indicator-thickness 7  --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --fade-in 0.2'
 
 output eDP-1 {
 	pos 0 0
@@ -79,7 +79,7 @@ exec swayidle timeout 510 'brightnessctl -s && brightnessctl set 5%' resume 'bri
 
     # Start your launcher
     bindsym $mod+d exec $menu
-    bindsym $mod+escape exec 'grim /tmp/screen.png; corrupter /tmp/screen.png /tmp/screen.png; swaylock -fi /tmp/screen.png --effect-vignette 0.5:0.5 --clock --indicator-radius 100 --indicator-thickness 7  --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 2 --fade-in 0.2'
+    bindsym $mod+escape exec 'grim /tmp/screen.png; corrupter /tmp/screen.png /tmp/screen.png; swaylock -fi /tmp/screen.png --effect-vignette 0.5:0.5 --clock --indicator-radius 100 --indicator-thickness 7  --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --fade-in 0.2'
     bindsym Print exec grim -g "$(slurp -d)" - | wl-copy -t image/png
     bindsym $mod+Home exec pkill waybar && waybar
     bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
@@ -92,7 +92,7 @@ exec swayidle timeout 510 'brightnessctl -s && brightnessctl set 5%' resume 'bri
     bindsym XF86AudioNext exec playerctl next
     bindsym XF86AudioPrev exec playerctl previous
     bindsym XF86Bluetooth exec echo "power on" | bluetoothctl
-    bindsym XF86Display exec /bin/sh /home/theo/.local/bin/mirrordisplay
+    bindsym XF86Display exec /bin/sh /home/theo/.scripts/mirrordisplay
     bindsym $mod+S exec /home/theo/.scripts/gettimecli -c 20_el_a | wofi --show dmenu
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
