@@ -9,8 +9,8 @@ set $right l
 # Your preferred terminal emulator
 set $term kitty
 
-#set $menu wofi --show drun
-set $menu dmenu_run
+set $menu wofi --show drun
+#set $menu dmenu_run
 input "1267:32:Elan_Touchpad" {
 	tap enabled
 	drag enabled
