@@ -18,6 +18,7 @@ input "1267:32:Elan_Touchpad" {
 }
 input * xkb_layout "se" 
 input * xkb_options caps:escape 
+input "9094:17198:Raydium_Corporation_Raydium_Touch_System" map_to_output eDP-1
 seat seat0 xcursor_theme default 
 
 #bindswitch lid:off exec swaylock
@@ -34,8 +35,7 @@ output eDP-1 {
 	adaptive_sync off
 }
 output HDMI-A-2 {
-	pos 1920 0
-	resolution 1680x1050
+	pos 1920 0 
 	adaptive_sync off
 }
 ### Output configuration
