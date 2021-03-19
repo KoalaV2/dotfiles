@@ -7,7 +7,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term alacritty
+set $term kitty
 
 set $menu wofi --show drun
 #set $menu dmenu_run
@@ -21,13 +21,13 @@ input * xkb_options caps:escape
 input "9094:17198:Raydium_Corporation_Raydium_Touch_System" map_to_output eDP-1
 seat seat0 xcursor_theme default 
 
-#bindswitch lid:off exec swaylock
+set $lock grim /tmp/screen.png; corrupter /tmp/screen.png /tmp/screen.png; swaylock -fi /tmp/screen.png --effect-vignette 0.5:0.5 --clock --indicator-radius 100 --indicator-thickness 7  --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --fade-in 0.2
 
+set $laptop_screen 'eDP-1'
 
-# BLUR
-# grim /tmp/screen.png; corrupter /tmp/screen.png /tmp/screen.png; swaylock -fi /tmp/screen.png --effect-vignette 0.5:0.5 --clock --indicator --indicator-radius 100 --indicator-thickness 7  --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 2 --fade-in 0.2; 
+bindswitch --reload --locked lid:on exec '[ $(swaymsg -t get_outputs | grep name | wc -l) == 1 ] && ($lock) || (swaymsg output $laptop_screen disable)'
 
-bindswitch lid:on exec 'grim /tmp/screen.png; corrupter /tmp/screen.png /tmp/screen.png; swaylock -fi /tmp/screen.png --effect-vignette 0.5:0.5 --clock --indicator-radius 100 --indicator-thickness 7  --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --fade-in 0.2'
+bindswitch --reload --locked lid:off output $laptop_screen enable
 
 output eDP-1 {
 	pos 0 0
@@ -74,12 +74,9 @@ exec swayidle timeout 510 'brightnessctl -s && brightnessctl set 5%' resume 'bri
     # Start a terminal
     bindsym $mod+Return exec $term
 
-    # Kill focused window
     bindsym $mod+w kill
 
-    # Start your launcher
     bindsym $mod+d exec $menu
-    #bindcode --release 133 exec $menu
     bindsym $mod+escape exec 'grim /tmp/screen.png; corrupter /tmp/screen.png /tmp/screen.png; swaylock -fi /tmp/screen.png --effect-vignette 0.5:0.5 --clock --indicator-radius 100 --indicator-thickness 7  --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --fade-in 0.2'
     bindsym Print exec grim -g "$(slurp -d)" - | wl-copy -t image/png
     bindsym $mod+Home exec pkill waybar && waybar
@@ -95,11 +92,7 @@ exec swayidle timeout 510 'brightnessctl -s && brightnessctl set 5%' resume 'bri
     #bindsym XF86Bluetooth exec echo "power on" | bluetoothctl
     bindsym XF86Display exec /bin/sh /home/theo/.scripts/mirrordisplay
     bindsym $mod+S exec /home/theo/.scripts/gettimecli -c 20_el_a | wofi --show dmenu
-    # Drag floating windows by holding down $mod and left mouse button.
-    # Resize them with right mouse button + $mod.
-    # Despite the name, also works for non-floating windows.
-    # Change normal to inverse to use left mouse button for resizing and right
-    # mouse button for dragging.
+    bindsym $mod+P exec clipd menu
     floating_modifier $mod normal
 
     # Reload the configuration file
@@ -107,9 +100,7 @@ exec swayidle timeout 510 'brightnessctl -s && brightnessctl set 5%' resume 'bri
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
-#
-# Moving around:
-#
+
     # Move your focus around
     bindsym $mod+$left focus left
     bindsym $mod+$down focus down
@@ -229,6 +220,7 @@ exec udiskie &
 exec waybar
 exec wlsunset -l 59.2 -L 17.7 & 
 exec kdeconnect-cli -d 686e98ad04425e5b --pair &
+exec --no-startup-id clipd
 #exec /usr/lib/xdg-desktop-portal-wlr --output=eDP-1
 #exec /usr/lib/xdg-desktop-portal -r
 exec systemctl --user start thinkpadbacklight.service
