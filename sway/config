@@ -21,7 +21,7 @@ input * xkb_options caps:escape
 input "9094:17198:Raydium_Corporation_Raydium_Touch_System" map_to_output eDP-1
 seat seat0 xcursor_theme default 
 
-set $lock grim /tmp/screen.png; corrupter /tmp/screen.png /tmp/screen.png; swaylock -fi /tmp/screen.png --effect-vignette 0.5:0.5 --clock --indicator-radius 100 --indicator-thickness 7  --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --fade-in 0.2
+set $lock 'grim /tmp/screen.png; corrupter /tmp/screen.png /tmp/screen.png; swaylock -fi /tmp/screen.png --effect-vignette 0.5:0.5 --clock --indicator-radius 100 --indicator-thickness 7  --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --fade-in 0.2'
 
 set $laptop_screen 'eDP-1'
 
@@ -56,6 +56,7 @@ output * bg /home/theo/Pictures/archpc_gruvbox.png fill
 # timeout 15 'brightnessctl --device="tpacpi::kbd_backlight" set 0' resume 'brightnessctl --device="tpacpi::kbd_backlight" set 2'
 
 exec swayidle timeout 510 'brightnessctl -s && brightnessctl set 5%' resume 'brightnessctl -r' timeout 510 'notify-send "Locking screen in 30 seconds..."' timeout 540 'grim /tmp/screen.png; corrupter /tmp/screen.png /tmp/screen.png; swaylock -fi /tmp/screen.png --effect-vignette 0.5:0.5 --clock --indicator-radius 100 --indicator-thickness 7  --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 2 --fade-in 0.2' timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' timeout 900 'systemctl suspend'
+exec swayidle before-sleep $lock
 
 #           before-sleep 'swaylock -f -c 000000'
 #
@@ -78,7 +79,8 @@ exec swayidle timeout 510 'brightnessctl -s && brightnessctl set 5%' resume 'bri
 
     bindsym $mod+d exec $menu
     bindsym $mod+escape exec 'grim /tmp/screen.png; corrupter /tmp/screen.png /tmp/screen.png; swaylock -fi /tmp/screen.png --effect-vignette 0.5:0.5 --clock --indicator-radius 100 --indicator-thickness 7  --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --fade-in 0.2'
-    bindsym Print exec grim -g "$(slurp -d)" - | wl-copy -t image/png
+    #bindsym Print exec grim -g "$(slurp -d)" - | wl-copy -t image/png
+    bindsym Print exec ~/.scripts/screenshot
     bindsym $mod+Home exec pkill waybar && waybar
     bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym XF86MonBrightnessUp exec brightnessctl set +5%
@@ -217,6 +219,7 @@ exec autotiling &
 exec lxsession & 
 exec pulseaudio -D 
 exec udiskie & 
+exec clipd &
 exec waybar
 exec wlsunset -l 59.2 -L 17.7 & 
 exec kdeconnect-cli -d 686e98ad04425e5b --pair &
