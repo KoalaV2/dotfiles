@@ -1,7 +1,7 @@
 source $HOME/.config/nvim/plugs.vim
 source $HOME/.config/nvim/maps.vim
 set number
-set autoindent
+set smartindent
 set showcmd
 set relativenumber
 colorscheme gruvbox
