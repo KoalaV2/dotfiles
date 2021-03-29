@@ -226,6 +226,7 @@ exec kdeconnect-cli -d 686e98ad04425e5b --pair &
 exec --no-startup-id clipd
 #exec /usr/lib/xdg-desktop-portal-wlr --output=eDP-1
 #exec /usr/lib/xdg-desktop-portal -r
+exec systemctl --user import-environment WAYLAND_DISPLAY
 exec systemctl --user start thinkpadbacklight.service
 exec systemctl --user start thinkpadbacklight-restart.timer
 include /etc/sway/config.d/*
@@ -233,4 +234,10 @@ include /etc/sway/config.d/*
 client.focused #ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2
 client.unfocused #453a3a #453a3a #453a3a #453a3a #453a3a 
 client.focused_inactive #453a3a #453a3a #453a3a #453a3a #453a3a
+
+border_images.focused /home/theo/.config/sway/shadows.png
+border_images.focused_inactive /home/theo/.config/sway/shadows.png
+border_images.unfocused /home/theo/.config/sway/shadows.png
+border_images.urgent /home/theo/.config/sway/shadows.png
+
 
