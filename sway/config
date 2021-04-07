@@ -91,7 +91,7 @@ exec swayidle before-sleep $lock
     bindsym XF86AudioPlay exec playerctl play-pause
     bindsym XF86AudioNext exec playerctl next
     bindsym XF86AudioPrev exec playerctl previous
-    #bindsym XF86Bluetooth exec echo "power on" | bluetoothctl
+    bindsym XF86Favorites exec bash -c /home/theo/.scripts/togglebluetooth 
     bindsym XF86Display exec /bin/sh /home/theo/.scripts/mirrordisplay
     bindsym $mod+S exec /home/theo/.scripts/gettimecli -c 20_el_a | wofi --show dmenu
     bindsym $mod+P exec clipd menu
