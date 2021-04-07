@@ -31,7 +31,7 @@ alias vpnd='sudo wg-quick down homelab'
 alias gp='git pull'
 alias gpsh='git push'
 alias gm='git commit'
-alias pb="curl -w '\n' -q -L --data-binary @- -o - https://pb.koalathe.dev/"
+alias pb="curl -w '\n' -q -L --data-binary @- -o - https://pb.koalathe.dev/ | sed 's/192.168.68.131:8343/pb.koalathe.dev/g'"
 
 zstyle ':bracketed-paste-magic' active-widgets '.self-*'
 
