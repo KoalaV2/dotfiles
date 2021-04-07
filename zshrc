@@ -1,16 +1,24 @@
-export ZSH="/home/theo/.oh-my-zsh"
-export ZSH_CUSTOM="/home/koala/.zsh"
-ZSH_THEME="robbyrussell"
-plugins=(git colorize pip sudo)
-source $ZSH/oh-my-zsh.sh
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 ZSH_AUTOSUGGEST_STRATEGY=(history)
 ENABLE_CORRECTION="true"
 HIST_STAMPS="yyyy-mm-dd"
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=2000
+
 unsetopt beep
 export LANG=en_US.UTF-8
 
+autoload -Uz compinit
+compinit -d ~/.cache/zcompdump
+zstyle ':completion:*:*:*:*:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # case insensitive tab completion
 
 alias ls='exa --icons --color=auto --group-directories-first'
 alias cat='bat'
@@ -29,3 +37,7 @@ zstyle ':bracketed-paste-magic' active-widgets '.self-*'
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
