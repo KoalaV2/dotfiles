@@ -16,10 +16,10 @@ input "1267:32:Elan_Touchpad" {
 	drag enabled
 	natural_scroll enabled
 }
-input * xkb_layout "se" 
-input * xkb_options caps:escape 
+input * xkb_layout "se"
+input * xkb_options caps:escape
 input "9094:17198:Raydium_Corporation_Raydium_Touch_System" map_to_output eDP-1
-seat seat0 xcursor_theme default 
+seat seat0 xcursor_theme default
 
 set $lock 'grim /tmp/screen.png; corrupter /tmp/screen.png /tmp/screen.png; swaylock -fi /tmp/screen.png --effect-vignette 0.5:0.5 --clock --indicator-radius 100 --indicator-thickness 7  --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --fade-in 0.2'
 
@@ -35,7 +35,7 @@ output eDP-1 {
 	adaptive_sync off
 }
 output HDMI-A-2 {
-	pos 1920 0 
+	pos 1920 0
 	adaptive_sync off
 }
 ### Output configuration
@@ -86,14 +86,14 @@ exec swayidle before-sleep $lock
     bindsym XF86MonBrightnessUp exec brightnessctl set +5%
    bindsym XF86AudioMute exec pamixer -t
     bindsym XF86AudioLowerVolume exec pamixer -d 5
-    bindsym XF86AudioRaiseVolume exec pamixer -i 5 
+    bindsym XF86AudioRaiseVolume exec pamixer -i 5
     bindsym XF86AudioMicMute exec pactl set-source-mute alsa_input.pci-0000_00_1f.3.analog-stereo toggle
     bindsym XF86AudioPlay exec playerctl play-pause
     bindsym XF86AudioNext exec playerctl next
     bindsym XF86AudioPrev exec playerctl previous
-    bindsym XF86Favorites exec bash -c /home/theo/.scripts/togglebluetooth 
+    bindsym XF86Favorites exec bash -c /home/theo/.scripts/togglebluetooth
     bindsym XF86Display exec /bin/sh /home/theo/.scripts/mirrordisplay
-    bindsym $mod+S exec /home/theo/.scripts/gettimecli -c 20_el_a | wofi --show dmenu
+    bindsym $mod+S exec /home/theo/.scripts/gettimecli -c 20_el_a | wofi --show dmenu -p $(date +%A)
     bindsym $mod+P exec clipd menu
     floating_modifier $mod normal
 
@@ -210,18 +210,18 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 default_border pixel 2
 smart_gaps on
-gaps inner 10 
+gaps inner 10
 gaps outer -10
 gaps bottom 1
 gaps top 1
 xwayland enable
 exec autotiling &
-exec lxsession & 
-exec pulseaudio -D 
-exec udiskie & 
+exec lxsession &
+exec pulseaudio -D
+exec udiskie &
 exec clipd &
 exec waybar
-exec wlsunset -l 59.2 -L 17.7 & 
+exec wlsunset -l 59.2 -L 17.7 &
 exec kdeconnect-cli -d 686e98ad04425e5b --pair &
 exec --no-startup-id clipd
 #exec /usr/lib/xdg-desktop-portal-wlr --output=eDP-1
@@ -232,7 +232,7 @@ exec systemctl --user start thinkpadbacklight-restart.timer
 include /etc/sway/config.d/*
 
 client.focused #ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2
-client.unfocused #453a3a #453a3a #453a3a #453a3a #453a3a 
+client.unfocused #453a3a #453a3a #453a3a #453a3a #453a3a
 client.focused_inactive #453a3a #453a3a #453a3a #453a3a #453a3a
 
 border_images.focused /home/theo/.config/sway/shadows.png
