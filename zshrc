@@ -33,6 +33,9 @@ alias gpsh='git push'
 alias gm='git commit'
 alias pb="curl -w '\n' -q -L --data-binary @- -o - https://pb.koalathe.dev/ | sed 's/192.168.68.131:8343/pb.koalathe.dev/g'"
 
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+
 zstyle ':bracketed-paste-magic' active-widgets '.self-*'
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
