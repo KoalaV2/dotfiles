@@ -24,7 +24,7 @@ set $lock 'grim /tmp/screen.png; corrupter /tmp/screen.png /tmp/screen.png; sway
 
 set $laptop_screen 'eDP-1'
 
-bindswitch --reload --locked lid:on exec ' bash -c "[ $(swaymsg -t get_outputs | grep name | wc -l) == 1 ] && ($lock) || (swaymsg output $laptop_screen disable)"'
+bindswitch --reload --locked lid:on exec 'bash -c "[ $(swaymsg -t get_outputs | grep name | wc -l) == 1 ] && ($lock) || (swaymsg output eDP-1 disable)"'
 
 bindswitch --reload --locked lid:off output $laptop_screen enable
 
@@ -34,7 +34,7 @@ output eDP-1 {
 	adaptive_sync off
 }
 output HDMI-A-2 {
-	pos 1920 0
+	pos 0 0
 	adaptive_sync off
 }
 
@@ -186,6 +186,7 @@ gaps outer -10
 gaps bottom 1
 gaps top 1
 xwayland enable
+exec dunst &
 exec autotiling &
 exec lxsession &
 exec pulseaudio -D
