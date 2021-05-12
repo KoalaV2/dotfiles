@@ -4,7 +4,6 @@ syntax enable
 set number
 set smartindent
 set showcmd
-set relativenumber
 set undofile
 set noswapfile
 set noerrorbells
