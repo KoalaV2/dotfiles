@@ -11,4 +11,5 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'machakann/vim-sandwich'
 Plug 'ervandew/supertab'
 Plug 'ap/vim-css-color'
+Plug 'Yggdroot/indentLine'
 call plug#end()
