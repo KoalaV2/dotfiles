@@ -31,7 +31,18 @@ alias vpnd='sudo wg-quick down homelab'
 alias gp='git pull'
 alias gpsh='git push'
 alias gm='git commit'
-alias pb="curl -w '\n' -q -L --data-binary @- -o - https://pb.koalathe.dev/ | sed 's/192.168.68.131:8343/pb.koalathe.dev/g'"
+alias pb="curl -w '\n' -q -L --data-binary @- -o - https://pb.theolikes.tech/ | sed 's/192.168.68.131:8343/pb.theolikes.tech/g'"
+
+
+function upload() {
+    local file="file=@$1"
+    local password="$2"
+    curl -u theo:$2 -F ${file} theolikes.tech:7331
+}
+function disc() {
+    local file="file=@$1"
+    ffmpeg -i $1 -vf "scale=iw/2:ih/2" output.mp4
+}
 
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
