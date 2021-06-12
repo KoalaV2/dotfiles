@@ -43,6 +43,9 @@ function disc() {
     local file="file=@$1"
     ffmpeg -i $1 -vf "scale=iw/2:ih/2" output.mp4
 }
+function bg() {
+     setsid -f $1 && exit
+}
 
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
