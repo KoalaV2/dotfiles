@@ -16,7 +16,8 @@ input "1267:32:Elan_Touchpad" {
 	natural_scroll enabled
 }
 input * xkb_layout "se"
-input * xkb_options caps:escape
+# Switch caps to escape, only use if you cant use caps2esc
+#input * xkb_options caps:escape
 input "9094:17198:Raydium_Corporation_Raydium_Touch_System" map_to_output eDP-1
 seat seat0 xcursor_theme default
 
@@ -34,7 +35,7 @@ output eDP-1 {
 	adaptive_sync off
 }
 output HDMI-A-2 {
-	pos 0 0
+	pos 1920 0
 	adaptive_sync off
 }
 
@@ -195,7 +196,7 @@ exec clipd &
 exec waybar
 exec wlsunset -l 59.2 -L 17.7 &
 exec kdeconnect-cli -d 686e98ad04425e5b --pair &
-exec --no-startup-id clipd
+exec caps2esc &
 #exec /usr/lib/xdg-desktop-portal-wlr --output=eDP-1
 #exec /usr/lib/xdg-desktop-portal -r
 exec systemctl --user import-environment WAYLAND_DISPLAY
