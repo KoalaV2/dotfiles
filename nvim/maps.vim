@@ -4,6 +4,7 @@ nnoremap <C-k> :GFiles?<CR>
 nnoremap <leader>h :wincmd h<cr>
 inoremap <S-Tab> <C-d>
 nnoremap <S-Tab> <<
+nnoremap <leader>e :CocCommand explorer<CR>
 nnoremap <leader>j :wincmd j<cr>
 nnoremap <leader>k :wincmd k<cr>
 nnoremap <leader>l :wincmd l<cr>
