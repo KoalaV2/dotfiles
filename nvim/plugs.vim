@@ -11,4 +11,5 @@ Plug 'machakann/vim-sandwich'
 Plug 'ervandew/supertab'
 Plug 'ap/vim-css-color'
 Plug 'Yggdroot/indentLine'
+Plug 'tpope/vim-commentary'
 call plug#end()
