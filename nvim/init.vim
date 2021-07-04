@@ -8,7 +8,7 @@ let g:rainbow_active = 1
 let g:coc_global_extensions = ['coc-explorer']
 autocmd BufWritePre * :%s/\s\+$//e
 filetype plugin on
-au BufReadPost,BufNewFile *.json let g:indentLine_enabled = 0
+au BufReadPost,BufNewFile *.txt,*.json let g:indentLine_enabled = 0
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal! g'\"" | endif
