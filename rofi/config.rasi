@@ -1,0 +1,9 @@
+configuration {
+ modi: "window,drun,ssh,combi";
+ font: "JetBrains Mono 10";
+ combi-modi: "window,drun,ssh";
+ show-icons: true;
+ icon-theme: "Papirus";
+ disable-history: false;
+ theme: "gruvbox.rasi";
+}
