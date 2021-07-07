@@ -49,6 +49,7 @@ function bg() {
 
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
+bindkey -v
 
 zstyle ':bracketed-paste-magic' active-widgets '.self-*'
 
