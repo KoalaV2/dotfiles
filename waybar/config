@@ -82,7 +82,7 @@
     },
     "network": {
     	"format": "{ifname}",
-	"format-ethernet": "{ifname}",
+	    "format-ethernet": "{ifname}",
         "format-wifi": "{essid} ",
         "format-linked": "{ifname} (No IP) ",
        	"format-disconnected": "Disconnected ⚠",
@@ -106,6 +106,6 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "kitty -e pulsemixer"
     }
 }
