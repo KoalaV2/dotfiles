@@ -106,6 +106,6 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "kitty -e pulsemixer"
+        "on-click": "pavucontrol"
     }
 }
