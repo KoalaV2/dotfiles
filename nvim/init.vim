@@ -10,7 +10,12 @@ let g:coc_global_extensions = ['coc-explorer','coc-discord-rpc','coc-python','co
 let g:SuperTabDefaultCompletionType = "<c-n>"
 autocmd BufWritePre * :%s/\s\+$//e
 filetype plugin on
+
+" Dont run indentLine on json and text files
 au BufReadPost,BufNewFile *.txt,*.json let g:indentLine_enabled = 0
+
+
+" Continue where last exited in file.
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal! g'\"" | endif

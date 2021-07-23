@@ -16,3 +16,4 @@ set shiftwidth=4
 set expandtab
 se cursorline
 set showtabline=2
+set spell
