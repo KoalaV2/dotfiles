@@ -9,9 +9,5 @@ nnoremap <leader>j :wincmd j<cr>
 nnoremap <leader>k :wincmd k<cr>
 nnoremap <leader>l :wincmd l<cr>
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<cr>
-nnoremap <Right> :vertical resize +2<CR>
-nnoremap <Left> :vertical resize -2<CR>
-nnoremap <Down> :resize +2<CR>
-nnoremap <Up> :resize -2<CR>
 nmap <leader>gd <Plug>(coc-defenition)
 nmap <leader>gr <Plug>(coc-references)

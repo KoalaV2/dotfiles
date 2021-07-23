@@ -3,6 +3,7 @@ set t_ut=              " Fix colorschemes inside tmux
 syntax enable
 set undodir=~/.vim/undodir
 set number
+set rnu
 set smartindent
 set showcmd
 set undofile
