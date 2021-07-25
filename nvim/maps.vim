@@ -11,3 +11,13 @@ nnoremap <leader>l :wincmd l<cr>
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<cr>
 nmap <leader>gd <Plug>(coc-defenition)
 nmap <leader>gr <Plug>(coc-references)
+" Fast pane resizing (C-w +/-/>/< and keep tapping/holding to resize)
+nmap          <C-W>+     <C-W>+<SID>ws
+nmap          <C-W>-     <C-W>-<SID>ws
+nn <script>   <SID>ws+   <C-W>+<SID>ws
+nn <script>   <SID>ws-   <C-W>-<SID>ws
+nmap          <C-W>>     <C-W>><SID>ws
+nmap          <C-W><     <C-W><<SID>ws
+nn <script>   <SID>ws>   <C-W>><SID>ws
+nn <script>   <SID>ws<   <C-W><<SID>ws
+nmap          <SID>ws    <Nop>
