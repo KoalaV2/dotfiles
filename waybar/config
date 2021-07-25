@@ -64,6 +64,7 @@
         "format-icons": ["", ""]
     },
     "battery": {
+        "bat": "BAT0",
         "states": {
             // "good": 95,
             "warning": 30,
@@ -76,9 +77,6 @@
         // "format-good": "", // An empty format will hide the module
         "format-full": "100% ",
         "format-icons": ["", "", "", "", ""]
-    },
-    "battery#bat2": {
-        "bat": "BAT0"
     },
     "network": {
     	"format": "{ifname}",
