@@ -173,14 +173,14 @@ xwayland enable
 exec dunst &
 exec autotiling &
 exec lxsession &
-exec pulseaudio -D
+exec pulseaudio -D &
 exec udiskie &
 exec waybar &
 exec wlsunset -l 59.2 -L 17.7 &
 exec kdeconnect-cli -d 686e98ad04425e5b --pair &
-exec systemctl --user import-environment WAYLAND_DISPLAY
-exec systemctl --user start thinkpadbacklight.service
-exec systemctl --user start thinkpadbacklight-restart.timer
+exec systemctl --user import-environment WAYLAND_DISPLAY &
+exec systemctl --user start thinkpadbacklight.service &
+exec systemctl --user start thinkpadbacklight-restart.timer &
 
 
 client.focused #ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2
