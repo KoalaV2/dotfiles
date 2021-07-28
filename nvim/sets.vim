@@ -1,3 +1,4 @@
+set termguicolors
 set formatoptions-=cro " Stop newline continuation of comments
 set t_ut=              " Fix colorschemes inside tmux
 syntax enable
@@ -15,6 +16,10 @@ set nowrap
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
-se cursorline
+set cursorline
 set showtabline=2
+set nobackup
+set noshowmode
+set hidden
 set spell
+set autoindent

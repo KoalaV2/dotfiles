@@ -1,7 +1,7 @@
 source $HOME/.config/nvim/plugs.vim
 source $HOME/.config/nvim/maps.vim
 source $HOME/.config/nvim/sets.vim
-set termguicolors
+
 colorscheme gruvbox
 let g:lightline = {}
 let g:lightline.colorscheme = 'gruvbox'
@@ -11,7 +11,7 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 autocmd BufWritePre * :%s/\s\+$//e
 filetype plugin on
 
-" Dont run indentLine on json and text files
+" Don't run indentLine on json and text files
 au BufReadPost,BufNewFile *.txt,*.json let g:indentLine_enabled = 0
 
 
