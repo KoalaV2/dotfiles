@@ -52,14 +52,14 @@ exec swayidle before-sleep $lock
 bindsym $mod+Return exec $term
 bindsym $mod+w kill
 bindsym $mod+d exec $menu
-bindsym $mod+escape exec 'grim /tmp/screen.png; corrupter /tmp/screen.png /tmp/screen.png; swaylock -fi /tmp/screen.png --effect-vignette 0.5:0.5 --clock --indicator-radius 100 --indicator-thickness 7  --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --fade-in 0.2'
+bindsym $mod+escape exec 'grim /tmp/screen.png; corrupter /tmp/screen.png /tmp/screengl.png; swaylock -fi /tmp/screengl.png --effect-vignette 0.5:0.5 --clock --indicator-radius 100 --indicator-thickness 7  --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --fade-in 0.2'
 bindsym Print exec ~/.scripts/screenshot
 bindsym $mod+Home exec pkill waybar && waybar
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym XF86AudioMute exec pamixer -t
-bindsym XF86AudioLowerVolume exec pamixer -d 5
-bindsym XF86AudioRaiseVolume exec pamixer -i 5
+bindsym XF86AudioLowerVolume exec pamixer --allow-boost -d 5
+bindsym XF86AudioRaiseVolume exec pamixer --allow-boost -i 5
 bindsym XF86AudioMicMute exec pactl set-source-mute alsa_input.pci-0000_00_1f.3.analog-stereo toggle
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next

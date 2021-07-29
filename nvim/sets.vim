@@ -7,6 +7,8 @@ set number
 set rnu
 set smartindent
 set showcmd
+set splitbelow
+set splitright
 set undofile
 set noswapfile
 set noerrorbells
