@@ -58,8 +58,8 @@ bindsym $mod+Home exec pkill waybar && waybar
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym XF86AudioMute exec pamixer -t
-bindsym XF86AudioLowerVolume exec pamixer --allow-boost -d 5
-bindsym XF86AudioRaiseVolume exec pamixer --allow-boost -i 5
+bindsym XF86AudioLowerVolume exec pamixer -d 5
+bindsym XF86AudioRaiseVolume exec pamixer -i 5
 bindsym XF86AudioMicMute exec pactl set-source-mute alsa_input.pci-0000_00_1f.3.analog-stereo toggle
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
