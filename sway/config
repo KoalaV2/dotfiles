@@ -48,7 +48,6 @@ output * bg /home/theo/Pictures/archpc_gruvbox.png fill
 exec swayidle timeout 510 'brightnessctl -s && brightnessctl set 5%' resume 'brightnessctl -r' timeout 510 'notify-send "Locking screen in 30 seconds..."' timeout 540 'grim /tmp/screen.png; corrupter /tmp/screen.png /tmp/screen.png; swaylock -fi /tmp/screen.png --effect-vignette 0.5:0.5 --clock --indicator-radius 100 --indicator-thickness 7  --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 2 --fade-in 0.2' timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' timeout 900 'systemctl suspend'
 exec swayidle before-sleep $lock
 
-
 bindsym $mod+Return exec $term
 bindsym $mod+w kill
 bindsym $mod+d exec $menu
@@ -149,10 +148,6 @@ bindsym $mod+minus scratchpad show
 # Resizing containers:
 #
 mode "resize" {
-    # left will shrink the containers width
-    # right will grow the containers width
-    # up will shrink the containers height
-    # down will grow the containers height
     bindsym $left resize shrink width 10px
     bindsym $down resize grow height 10px
     bindsym $up resize shrink height 10px
@@ -162,14 +157,19 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
+
 bindsym $mod+r mode "resize"
+
 default_border pixel 2
+
 smart_gaps on
 gaps inner 10
 gaps outer -10
 gaps bottom 1
 gaps top 1
+
 xwayland enable
+
 exec dunst &
 exec autotiling &
 exec lxsession &
