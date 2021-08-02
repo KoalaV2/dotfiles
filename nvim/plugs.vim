@@ -12,5 +12,6 @@ Plug 'ervandew/supertab'
 Plug 'ap/vim-css-color'
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-commentary'
+Plug 'airblade/vim-gitgutter'
 " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 call plug#end()
