@@ -25,3 +25,4 @@ set noshowmode
 set hidden
 set spell
 set autoindent
+set mouse=a

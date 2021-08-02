@@ -6,11 +6,11 @@ colorscheme gruvbox
 let g:lightline = {}
 let g:lightline.colorscheme = 'gruvbox'
 let g:rainbow_active = 1
-let g:coc_global_extensions = ['coc-explorer','coc-discord-rpc','coc-python','coc-prettier','coc-json']
+let g:coc_global_extensions = ['coc-explorer','coc-discord-rpc','coc-pyright','coc-prettier','coc-json']
 let g:SuperTabDefaultCompletionType = "<c-n>"
+
 autocmd BufWritePre * :%s/\s\+$//e
 filetype plugin on
-set mouse=a
 
 " Don't run indentLine on json and text files
 au BufReadPost,BufNewFile *.txt,*.json let g:indentLine_enabled = 0
