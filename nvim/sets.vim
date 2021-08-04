@@ -13,12 +13,14 @@ set undofile
 set noswapfile
 set noerrorbells
 set incsearch
+set ignorecase
 set smartcase
 set nowrap
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
 set cursorline
+set cursorcolumn
 set showtabline=2
 set nobackup
 set noshowmode

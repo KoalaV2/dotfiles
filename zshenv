@@ -7,3 +7,6 @@ export EDITOR=nvim
 export LIBVIRT_DEFAULT_URI="qemu:///system"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export GTK_THEME=Gruvbox-Material-Dark
+export BROWSER="/usr/bin/firefox"
+export LANG=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8

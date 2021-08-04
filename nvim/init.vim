@@ -6,7 +6,7 @@ colorscheme gruvbox
 let g:lightline = {}
 let g:lightline.colorscheme = 'gruvbox'
 let g:rainbow_active = 1
-let g:coc_global_extensions = ['coc-explorer','coc-discord-rpc','coc-pyright','coc-prettier','coc-json']
+let g:coc_global_extensions = ['coc-explorer','coc-discord-rpc','coc-pyright','coc-prettier','coc-json','coc-sh']
 let g:SuperTabDefaultCompletionType = "<c-n>"
 
 autocmd BufWritePre * :%s/\s\+$//e
