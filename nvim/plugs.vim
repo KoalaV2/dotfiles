@@ -1,5 +1,4 @@
 call plug#begin()
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -12,7 +11,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'machakann/vim-sandwich'
 Plug 'ervandew/supertab'
 Plug 'ap/vim-css-color'
-" Plug 'Yggdroot/indentLine'
+Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 call plug#end()
