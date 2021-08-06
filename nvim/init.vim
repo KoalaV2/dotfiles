@@ -8,12 +8,12 @@ let g:lightline.colorscheme = 'gruvbox'
 let g:rainbow_active = 1
 let g:SuperTabDefaultCompletionType = "<c-n>"
 let g:indent_blankline_show_first_indent_level = v:false
-let g:coc_global_extensions = ['coc-explorer','coc-discord-rpc','coc-pyright','coc-prettier','coc-json','coc-sh']
+let g:coc_global_extensions = ['coc-explorer','coc-discord-rpc','coc-pyright','coc-prettier','coc-json','coc-sh','coc-snippets']
 
 autocmd BufWritePre * :%s/\s\+$//e
 filetype plugin on
 
-let g:indent_blankline_filetype_exclude = ['json','txt']
+" let g:indent_blankline_filetype_exclude = ['json','txt']
 
 " Continue where last exited in file.
 if has("autocmd")
@@ -22,7 +22,3 @@ if has("autocmd")
 endif
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
-
-" lua << EOF
-" require("lsp")
-" EOF
