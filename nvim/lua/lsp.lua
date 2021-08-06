@@ -2,6 +2,8 @@
 require'lspconfig'.pyright.setup{}
 -- npm i -g bash-language-server
 require'lspconfig'.bashls.setup{}
+-- npm i -g ansible-language-server
+-- require'lspconfig'.ansiblels.setup{}
 
 require'compe'.setup {
   enabled = true;
