@@ -25,7 +25,7 @@ input "9094:17198:Raydium_Corporation_Raydium_Touch_System" {
 
 seat seat0 xcursor_theme default
 
-set $lock 'grim /tmp/screen.png; corrupter /tmp/screen.png /tmp/screen.png; swaylock -fi /tmp/screen.png --effect-vignette 0.5:0.5 --clock --indicator-radius 100 --indicator-thickness 7  --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --fade-in 0.2'
+set $lock 'grim /tmp/screen.png; corrupter /tmp/screen.png /tmp/screengl.png; swaylock -fi /tmp/screengl.png --effect-vignette 0.5:0.5 --clock --indicator-radius 100 --indicator-thickness 7  --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --fade-in 0.2'
 
 set $laptop_screen 'eDP-1'
 
