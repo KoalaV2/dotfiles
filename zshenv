@@ -10,3 +10,6 @@ export GTK_THEME=Gruvbox-Material-Dark
 export BROWSER="/usr/bin/firefox"
 export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
+export QT_QPA_PLATFORM=wayland-egl
+export SDL_VIDEODRIVER=wayland
+export XDG_SESSION_TYPE=wayland
