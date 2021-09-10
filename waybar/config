@@ -4,7 +4,6 @@
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
     "modules-right": ["idle_inhibitor", "pulseaudio", "network", "backlight", "battery", "clock"],
-    // Modules configuration
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -50,7 +49,7 @@
     "battery": {
         "bat": "BAT0",
         "states": {
-            "good": 95,
+            // "good": 95,
             "warning": 30,
             "critical": 15
         },
@@ -58,7 +57,7 @@
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
-        "format-good": "", // An empty format will hide the module
+        // "format-good": "",
         "format-full": "100% ",
         "format-icons": ["", "", "", "", ""]
     },
@@ -68,10 +67,10 @@
         "format-wifi": "{essid} ",
         "format-linked": "{ifname} (No IP) ",
        	"format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
         "disable-scroll": true,
         "format": "{icon} {volume}    {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
