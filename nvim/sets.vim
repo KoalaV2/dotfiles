@@ -25,6 +25,6 @@ set showtabline=2
 set nobackup
 set noshowmode
 set hidden
-set spell
+set spell spelllang=en_us,sv
 set autoindent
 set mouse=a
