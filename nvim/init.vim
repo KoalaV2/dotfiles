@@ -9,12 +9,11 @@ let g:rainbow_active = 1
 let g:SuperTabDefaultCompletionType = "<c-n>"
 let g:indent_blankline_show_first_indent_level = v:false
 let g:coc_global_extensions = ['coc-explorer','coc-discord-rpc','coc-pyright','coc-prettier','coc-json','coc-sh','coc-snippets','coc-tsserver']
-" let g:indent_blankline_space_char = '*'
+let g:minimap_width = 10
+let g:minimap_auto_start = 1
 
 autocmd BufWritePre * :%s/\s\+$//e
 filetype plugin on
-
-" let g:indent_blankline_filetype_exclude = ['json','txt']
 
 " Continue where last exited in file.
 if has("autocmd")
