@@ -13,8 +13,6 @@ HISTSIZE=1000
 SAVEHIST=2000
 
 unsetopt beep
-export LANG=en_US.UTF-8
-
 autoload -Uz compinit
 compinit -d ~/.cache/zcompdump
 zstyle ':completion:*:*:*:*:*' menu select
