@@ -131,19 +131,7 @@ bindsym $mod+Shift+space floating toggle
 
 # Swap focus between the tiling area and the floating area
 bindsym $mod+space focus mode_toggle
-#
-# Scratchpad:
-#
-# Sway has a "scratchpad", which is a bag of holding for windows.
-# You can send windows there and get them back later.
 
-# Move the currently focused window to the scratchpad
-bindsym $mod+Shift+minus move scratchpad
-
-# Show the next scratchpad window or hide the focused scratchpad window.
-# If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+minus scratchpad show
-#
 # Resizing containers:
 #
 mode "resize" {
@@ -170,9 +158,9 @@ gaps top 1
 xwayland enable
 
 exec waybar &
-exec dunst &
 exec autotiling &
 exec lxsession &
+exec systemctl --user start dunst &
 exec pulseaudio -D &
 exec udiskie &
 exec wlsunset -l 59.2 -L 17.7 &
@@ -186,9 +174,9 @@ client.focused #ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2
 client.unfocused #453a3a #453a3a #453a3a #453a3a #453a3a
 client.focused_inactive #453a3a #453a3a #453a3a #453a3a #453a3a
 
-border_images.focused /home/theo/.config/sway/shadows.png
-border_images.focused_inactive /home/theo/.config/sway/shadows.png
-border_images.unfocused /home/theo/.config/sway/shadows.png
-border_images.urgent /home/theo/.config/sway/shadows.png
+# border_images.focused /home/theo/.config/sway/shadows.png
+# border_images.focused_inactive /home/theo/.config/sway/shadows.png
+# border_images.unfocused /home/theo/.config/sway/shadows.png
+# border_images.urgent /home/theo/.config/sway/shadows.png
 
 include /etc/sway/config.d/*
