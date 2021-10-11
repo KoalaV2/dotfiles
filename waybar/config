@@ -71,7 +71,7 @@
         "tooltip-format": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-        "disable-scroll": true,
+        "scroll-step": 0,
         "format": "{icon} {volume}    {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
