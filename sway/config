@@ -36,7 +36,8 @@ output eDP-1 {
 	pos 0 0
 	resolution 1920x1080
 }
-output HDMI-A-2 {
+output 'Dell Inc. DELL E228WFP DT86779130AM' {
+    resolution 1680x1050
 	pos 1920 0
 }
 output * {
