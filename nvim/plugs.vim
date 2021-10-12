@@ -14,4 +14,5 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 Plug 'wfxr/minimap.vim'
+Plug 'honza/vim-snippets'
 call plug#end()

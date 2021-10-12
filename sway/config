@@ -35,11 +35,12 @@ set $laptop_screen 'eDP-1'
 output eDP-1 {
 	pos 0 0
 	resolution 1920x1080
-	adaptive_sync off
 }
 output HDMI-A-2 {
 	pos 1920 0
-	adaptive_sync off
+}
+output * {
+    adaptive_sync off
 }
 
 output * bg /home/theo/Pictures/archpc_gruvbox.png fill
