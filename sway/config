@@ -13,11 +13,14 @@ input "1267:32:Elan_Touchpad" {
 	tap enabled
 	drag enabled
 	natural_scroll enabled
+    #dwt disabled
 }
 input * {
     xkb_layout "se"
     xkb_options caps:escape
 }
+
+# Touchscreen
 input "9094:17198:Raydium_Corporation_Raydium_Touch_System" {
     # events disabled
     map_to_output eDP-1
@@ -60,7 +63,7 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym XF86AudioMute exec pamixer -t
 bindsym XF86AudioLowerVolume exec pamixer -d 5
 bindsym XF86AudioRaiseVolume exec pamixer -i 5
-bindsym XF86AudioMicMute exec pactl set-source-mute alsa_input.pci-0000_00_1f.3.analog-stereo toggle
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
