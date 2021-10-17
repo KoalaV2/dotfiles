@@ -1,4 +1,12 @@
 let mapleader = " "
+nnoremap Y y$
+nnoremap n nzzzv
+nnoremap N Nzzzv
+" do not undo all text.
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
 nnoremap <C-j> :GFiles<CR>
 nnoremap <C-k> :GFiles?<CR>
 nnoremap <leader>h :wincmd h<cr>
