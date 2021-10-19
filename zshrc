@@ -30,6 +30,7 @@ alias gp='git pull'
 alias gpsh='git push'
 alias gm='git commit'
 alias pb="curl -w '\n' -q -L --data-binary @- -o - https://pb.theolikes.tech/ | sed 's/192.168.68.131:8343/pb.theolikes.tech/g'"
+alias todo="grep -n TODO *"
 
 
 function upload() {

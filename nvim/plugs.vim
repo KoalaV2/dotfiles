@@ -15,4 +15,5 @@ Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 Plug 'wfxr/minimap.vim'
 Plug 'honza/vim-snippets'
+Plug 'szw/vim-maximizer'
 call plug#end()
