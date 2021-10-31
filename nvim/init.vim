@@ -27,3 +27,4 @@ endif
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 lua <<EOF
 require('nvim-autopairs').setup{}
+EOF
