@@ -14,4 +14,5 @@ Plug 'honza/vim-snippets'
 Plug 'szw/vim-maximizer'
 Plug 'github/copilot.vim'
 Plug 'windwp/nvim-autopairs'
+Plug 'prettier/vim-prettier', {'do': 'yarn install'}
 call plug#end()
