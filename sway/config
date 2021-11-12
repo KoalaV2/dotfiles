@@ -172,7 +172,7 @@ xwayland enable
 exec waybar &
 exec autotiling &
 exec lxsession &
-exec systemctl --user start dunst &
+exec mako &
 exec pulseaudio -D &
 exec udiskie &
 exec wlsunset -l 59.2 -L 17.7 &
