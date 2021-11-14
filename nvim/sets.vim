@@ -29,4 +29,3 @@ set hidden
 set spell spelllang=en_us,sv
 set autoindent
 set mouse=a
-set scrolloff=8

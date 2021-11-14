@@ -24,6 +24,13 @@ if has("autocmd")
     \| exe "normal! g'\"" | endif
 endif
 
+" Set scrolloff to 25% of the window height.
+augroup VCenterCursor
+  au!
+  au BufEnter,WinEnter,WinNew,VimResized *,*.*
+        \ let &scrolloff=winheight(win_getid())/4
+augroup END
+
 lua <<EOF
 require('nvim-autopairs').setup{}
 EOF
