@@ -1,3 +1,4 @@
+set title
 set termguicolors
 set formatoptions-=cro " Stop newline continuation of comments
 set t_ut=              " Fix colorschemes inside tmux
@@ -28,3 +29,4 @@ set hidden
 set spell spelllang=en_us,sv
 set autoindent
 set mouse=a
+set scrolloff=10
