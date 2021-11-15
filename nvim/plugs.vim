@@ -15,4 +15,5 @@ Plug 'szw/vim-maximizer'
 Plug 'github/copilot.vim'
 Plug 'windwp/nvim-autopairs'
 Plug 'prettier/vim-prettier', {'do': 'yarn install'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 call plug#end()
