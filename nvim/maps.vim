@@ -9,8 +9,8 @@ inoremap ! !<c-g>u
 inoremap ? ?<c-g>u
 nnoremap <C-j> :GFiles<CR>
 nnoremap <C-k> :GFiles?<CR>
-nnoremap <leader>h :wincmd h<cr>
 nnoremap <leader>m :MaximizerToggle<CR>
+nnoremap <leader>h :wincmd h<cr>
 nnoremap <leader>j :wincmd j<cr>
 nnoremap <leader>k :wincmd k<cr>
 nnoremap <leader>l :wincmd l<cr>

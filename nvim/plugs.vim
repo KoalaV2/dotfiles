@@ -11,9 +11,11 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 Plug 'honza/vim-snippets'
-Plug 'szw/vim-maximizer'
+Plug 'szw/vim-maximizer', { 'on': 'MaximizerToggle'}
 Plug 'github/copilot.vim'
 Plug 'windwp/nvim-autopairs'
 Plug 'prettier/vim-prettier', {'do': 'yarn install'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+Plug 'dstein64/vim-startuptime', {'on': 'StartupTime'}
+Plug 'nathom/filetype.nvim'
 call plug#end()
