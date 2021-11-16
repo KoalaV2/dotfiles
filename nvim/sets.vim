@@ -9,7 +9,7 @@ set smartindent
 set showcmd
 set splitbelow splitright
 set undofile noswapfile " Set a undofile and disable swapfile
-set noerrorbell " Set a undofile and disable swapfile
+set noerrorbells " Set a undofile and disable swapfile
 set incsearch ignorecase smartcase " Better searching.
 set nowrap
 set tabstop=4 softtabstop=4
