@@ -13,6 +13,7 @@ input "1267:32:Elan_Touchpad" {
 	tap enabled
 	drag enabled
 	natural_scroll enabled
+    scroll_factor 0.5
     #dwt disabled
 }
 input * {
@@ -187,9 +188,9 @@ client.focused #ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2
 client.unfocused #453a3a #453a3a #453a3a #453a3a #453a3a
 client.focused_inactive #453a3a #453a3a #453a3a #453a3a #453a3a
 
-# border_images.focused /home/theo/.config/sway/shadows.png
-# border_images.focused_inactive /home/theo/.config/sway/shadows.png
-# border_images.unfocused /home/theo/.config/sway/shadows.png
-# border_images.urgent /home/theo/.config/sway/shadows.png
+border_images.focused /home/theo/.config/sway/shadows.png
+border_images.focused_inactive /home/theo/.config/sway/shadows.png
+border_images.unfocused /home/theo/.config/sway/shadows.png
+border_images.urgent /home/theo/.config/sway/shadows.png
 
 include /etc/sway/config.d/*
