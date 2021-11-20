@@ -35,8 +35,8 @@ require'lualine'.setup {
   options = {
     theme = 'gruvbox-material',
     icons_enabled = false,
-    section_separators = '',
-    component_separators = ''
+    section_separators = ' ',
+    component_separators = '|'
   },
 }
 require'nvim-treesitter.configs'.setup {
