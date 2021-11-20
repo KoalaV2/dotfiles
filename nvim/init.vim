@@ -3,13 +3,11 @@ source $HOME/.config/nvim/maps.vim
 source $HOME/.config/nvim/sets.vim
 
 colorscheme gruvbox
-let g:lightline = {}
-let g:lightline.colorscheme = 'gruvbox'
 let g:rainbow_active = 1
 let g:SuperTabDefaultCompletionType = "<c-n>"
 let g:indent_blankline_show_first_indent_level = v:false
-let g:prettier#autoformat = 1
-let g:prettier#autoformat_require_pragma = 0
+" let g:prettier#autoformat = 1
+" let g:prettier#autoformat_require_pragma = 0
 " let g:coc_global_extensions = ['coc-pyright','coc-json','coc-sh','coc-snippets','coc-tsserver','coc-snippets']
 let g:copilot_filetypes = {
       \ 'txt': v:false,
@@ -33,11 +31,19 @@ augroup END
 
 lua <<EOF
 require('nvim-autopairs').setup{}
+require'lualine'.setup {
+  options = {
+    theme = 'gruvbox-material',
+    icons_enabled = false,
+    section_separators = '',
+    component_separators = ''
+  },
+}
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
   highlight = {
-    enable = true,              -- false will disable the whole extension
+    enable = true,
     disable = { "html" },  -- list of language that will be disabled
     additional_vim_regex_highlighting = true, -- enable additional highlighting based on vim regexp engine ( Also fixing a odd spellcheck issue. )
   },
