@@ -16,6 +16,7 @@ Plug 'prettier/vim-prettier', {'do': 'yarn install'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 Plug 'dstein64/vim-startuptime', {'on': 'StartupTime'}
 Plug 'nvim-lualine/lualine.nvim'
-" Plug 'kyazdani42/nvim-web-devicons' " For colored icons
+Plug 'alvarosevilla95/luatab.nvim'
+Plug 'kyazdani42/nvim-web-devicons' " For colored icons
 " Plug 'ryanoasis/vim-devicons'
 call plug#end()

@@ -14,6 +14,16 @@ nnoremap <leader>h :wincmd h<cr>
 nnoremap <leader>j :wincmd j<cr>
 nnoremap <leader>k :wincmd k<cr>
 nnoremap <leader>l :wincmd l<cr>
+" Disable arrow keys.
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+
+
+" Rebind copilot to End and Right arrow key.
+imap <silent><script><expr> <End> copilot#Accept("\<CR>")
+imap <silent><script><expr> <Right> copilot#Accept("\<CR>")
+
 " Fast pane resizing (C-w +/-/>/< and keep tapping/holding to resize)
 nmap          <C-W>+     <C-W>+<SID>ws
 nmap          <C-W>-     <C-W>-<SID>ws

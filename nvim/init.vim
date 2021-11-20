@@ -8,10 +8,10 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 let g:indent_blankline_show_first_indent_level = v:false
 " let g:prettier#autoformat = 1
 " let g:prettier#autoformat_require_pragma = 0
-" let g:coc_global_extensions = ['coc-pyright','coc-json','coc-sh','coc-snippets','coc-tsserver','coc-snippets']
 let g:copilot_filetypes = {
       \ 'txt': v:false,
       \ }
+let g:copilot_no_tab_map = v:true
 
 autocmd BufWritePre * :%s/\s\+$//e
 filetype plugin on
@@ -29,8 +29,12 @@ augroup VCenterCursor
         \ let &scrolloff=winheight(win_getid())/4
 augroup END
 
+" Preserving equal sized split view.
+autocmd VimResized * wincmd =
+
 lua <<EOF
 require('nvim-autopairs').setup{}
+require('luatab').setup{}
 require'lualine'.setup {
   options = {
     theme = 'gruvbox-material',
