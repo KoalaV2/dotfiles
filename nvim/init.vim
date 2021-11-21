@@ -34,6 +34,7 @@ autocmd VimResized * wincmd =
 
 lua <<EOF
 require('nvim-autopairs').setup{}
+require('gitsigns').setup()
 require('luatab').setup{}
 require'lualine'.setup {
   options = {
