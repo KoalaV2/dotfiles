@@ -33,8 +33,10 @@ augroup END
 autocmd VimResized * wincmd =
 
 lua <<EOF
+require('gitsigns').setup{
+    keymaps = {}
+}
 require('nvim-autopairs').setup{}
-require('gitsigns').setup()
 require('luatab').setup{}
 require'lualine'.setup {
   options = {
