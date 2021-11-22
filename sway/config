@@ -63,8 +63,8 @@ bindsym $mod+Home exec pkill waybar && waybar
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym XF86AudioMute exec pamixer -t
-bindsym XF86AudioLowerVolume exec pamixer -d 5
-bindsym XF86AudioRaiseVolume exec pamixer -i 5
+bindsym XF86AudioLowerVolume exec pamixer -d 5 && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
+bindsym XF86AudioRaiseVolume exec pamixer -i 5 && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
