@@ -38,7 +38,7 @@ require('gitsigns').setup()
 require('luatab').setup{}
 require'lualine'.setup {
   options = {
-    theme = 'gruvbox-material',
+    theme = 'gruvbox',
     icons_enabled = false,
     section_separators = ' ',
     component_separators = '|'
