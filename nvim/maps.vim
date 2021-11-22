@@ -10,10 +10,10 @@ inoremap ? ?<c-g>u
 nnoremap <C-j> :GFiles<CR>
 nnoremap <C-k> :GFiles?<CR>
 nnoremap <leader>m :MaximizerToggle<CR>
-nnoremap <leader>h :wincmd h<cr>
-nnoremap <leader>j :wincmd j<cr>
-nnoremap <leader>k :wincmd k<cr>
-nnoremap <leader>l :wincmd l<cr>
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
 " Disable arrow keys.
 noremap <Up> <Nop>
 noremap <Down> <Nop>
