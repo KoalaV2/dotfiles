@@ -34,7 +34,7 @@ autocmd VimResized * wincmd =
 
 lua <<EOF
 require('gitsigns').setup{
-    keymaps = {}
+    keymaps = {} -- Disable keymaps made by gitsigns.
 }
 require('nvim-autopairs').setup{}
 require('luatab').setup{}
