@@ -11,7 +11,7 @@ set splitbelow splitright " Horizontal split below and vertical split to the rig
 set undofile noswapfile " Set a undofile and disable swapfile
 set noerrorbells " Set a undofile and disable swapfile
 set incsearch ignorecase smartcase " Better searching.
-set nowrap " Dont wrap any words.
+set nowrap " Don't wrap any words.
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
@@ -20,6 +20,6 @@ set showtabline=2
 set nobackup " Disable backup files
 set noshowmode
 set hidden
-set spell spelllang=en_us,sv " Set spellcheck language
+" set spell spelllang=en_us,sv " Set spellcheck language
 set autoindent
 set mouse=a " Enable mouse
