@@ -6,5 +6,6 @@ font=JetBrains Mono 10
 border-radius=10
 
 [urgency=high]
-border-color=#bf616a
+border-color=#FF0000
 default-timeout=0
+border-size=4
