@@ -9,3 +9,4 @@ border-radius=10
 border-color=#FF0000
 default-timeout=0
 border-size=4
+layer=overlay
