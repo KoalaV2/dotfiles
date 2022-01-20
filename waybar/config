@@ -36,7 +36,6 @@
         "spacing": 0
     },
     "clock": {
-        // "timezone": "Europe/Stockholm",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
@@ -63,7 +62,7 @@
     },
     "network": {
     	"format": "{ifname}",
-	    "format-ethernet": "{ifname}",
+	    "format-ethernet": "{ifname} ",
         "format-wifi": "{essid} ",
         "format-linked": "{ifname} (No IP) ",
        	"format-disconnected": "Disconnected ⚠",
