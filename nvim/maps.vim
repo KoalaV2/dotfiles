@@ -7,7 +7,7 @@ inoremap , ,<c-g>u
 inoremap . .<c-g>u
 inoremap ! !<c-g>u
 inoremap ? ?<c-g>u
-nnoremap <C-j> :GFiles<CR>
+nnoremap <C-j> :Files<CR>
 nnoremap <C-k> :GFiles?<CR>
 nnoremap <leader>m :MaximizerToggle<CR>
 " Move between windows
