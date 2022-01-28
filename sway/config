@@ -33,9 +33,9 @@ set $lidlock 'swaylock -i /home/theo/Pictures/archpc_gruvbox_glitch.png --effect
 
 set $laptop_screen 'eDP-1'
 
-# bindswitch --reload --locked lid:on output $laptop_screen disable
+bindswitch --reload --locked lid:on output $laptop_screen disable
 
-# bindswitch --reload --locked lid:off output $laptop_screen enable
+bindswitch --reload --locked lid:off output $laptop_screen enable
 
 output eDP-1 {
 	pos 0 0
@@ -188,9 +188,9 @@ client.focused #ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2
 client.unfocused #453a3a #453a3a #453a3a #453a3a #453a3a
 client.focused_inactive #453a3a #453a3a #453a3a #453a3a #453a3a
 
-border_images.focused /home/theo/.config/sway/shadows.png
-border_images.focused_inactive /home/theo/.config/sway/shadows.png
-border_images.unfocused /home/theo/.config/sway/shadows.png
-border_images.urgent /home/theo/.config/sway/shadows.png
+#border_images.focused /home/theo/.config/sway/shadows.png
+#border_images.focused_inactive /home/theo/.config/sway/shadows.png
+#border_images.unfocused /home/theo/.config/sway/shadows.png
+#border_images.urgent /home/theo/.config/sway/shadows.png
 
 include /etc/sway/config.d/*
