@@ -14,8 +14,8 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 ZSH_AUTOSUGGEST_STRATEGY=(history)
-ENABLE_CORRECTION="true"
 HIST_STAMPS="yyyy-mm-dd"
+ENABLE_CORRECTION="true"
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=2000
@@ -45,12 +45,6 @@ alias ssh="TERM=xterm-256color ssh"
 function disc() {
     local file="file=@$1"
     ffmpeg -i $1 -vf "scale=iw/2:ih/2" output.mp4
-}
-function bg() {
-    setsid -f $1 && exit
-}
-function pubip() {
-    curl ipecho.net/plain
 }
 function upload() {
     ~/.webpass.sh
