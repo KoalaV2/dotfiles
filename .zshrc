@@ -36,9 +36,8 @@ alias vpnc='nmcli c up homelab'
 alias vpnd='nmcli c down homelab'
 alias ga='git add'
 alias gp='git pull'
-alias gpsh='git push'
 alias gm='git commit'
-alias pb="curl -w '\n' -q -L --data-binary @- -o - https://pb.theolikes.tech/ | sed 's/192.168.68.131:8343/pb.theolikes.tech/g'"
+alias gpsh='git push'
 alias todo="grep -n TODO *"
 alias ssh="TERM=xterm-256color ssh"
 
@@ -57,7 +56,7 @@ bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
-bindkey -v
 bindkey '^R' history-incremental-search-backward
+bindkey -v
 
 zstyle ':bracketed-paste-magic' active-widgets '.self-*'
