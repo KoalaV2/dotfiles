@@ -14,7 +14,6 @@ input "1267:32:Elan_Touchpad" {
 	drag enabled
 	natural_scroll enabled
     scroll_factor 0.5
-    #dwt disabled
 }
 input * {
     xkb_layout "se"
@@ -24,8 +23,8 @@ input * {
 
 # Touchscreen
 input "9094:17198:Raydium_Corporation_Raydium_Touch_System" {
-    # events disabled
     map_to_output eDP-1
+    #events disabled
 }
 
 set $lock 'grim /tmp/screen.png; corrupter /tmp/screen.png /tmp/screen.png; swaylock -fi /tmp/screen.png --effect-vignette 0.5:0.5 --clock --indicator-radius 100 --indicator-thickness 7  --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --fade-in 0.2'
@@ -49,9 +48,9 @@ output * {
     adaptive_sync off
 }
 
-output * bg /home/theo/Pictures/archpc_gruvbox.png fill
+output * bg ~/Pictures/archpc_gruvbox.png fill
 
-exec swayidle timeout 510 'brightnessctl -s && brightnessctl set 5%' resume 'brightnessctl -r' timeout 510 'notify-send "Locking screen in 30 seconds..."' timeout 540 'grim /tmp/screen.png; corrupter /tmp/screen.png /tmp/screen.png; swaylock -fi /tmp/screen.png --effect-vignette 0.5:0.5 --clock --indicator-radius 100 --indicator-thickness 7  --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 2 --fade-in 0.2' timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' timeout 900 'systemctl suspend'
+exec swayidle timeout 510 'brightnessctl -s && brightnessctl set 5%' resume 'brightnessctl -r' timeout 510 'notify-send "Screen" "Locking in 30 seconds..."' timeout 540 'grim /tmp/screen.png; corrupter /tmp/screen.png /tmp/screen.png; swaylock -fi /tmp/screen.png --effect-vignette 0.5:0.5 --clock --indicator-radius 100 --indicator-thickness 7  --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 2 --fade-in 0.2' timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' timeout 900 'systemctl suspend'
 exec swayidle before-sleep $lidlock
 
 bindsym $mod+Return exec $term
@@ -174,7 +173,6 @@ exec waybar &
 exec autotiling &
 exec lxsession &
 exec mako &
-exec pulseaudio -D &
 exec udiskie &
 exec wlsunset -l 59.2 -L 17.7 &
 exec kdeconnect-cli -d 686e98ad04425e5b --pair &
