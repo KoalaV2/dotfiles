@@ -13,7 +13,7 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-ZSH_AUTOSUGGEST_STRATEGY=(history)
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 HIST_STAMPS="yyyy-mm-dd"
 ENABLE_CORRECTION="true"
 HISTFILE=~/.zsh_history
@@ -48,6 +48,12 @@ function disc() {
 function upload() {
     ~/.webpass.sh
     output=$(curl -X POST -u koala:$PASSWD -F "file=@$1" http://130.162.53.121:7333/)
+    echo "$output copied to clipboard."
+    wl-copy $output
+}
+function uploadlocal() {
+    ~/.webpass.sh
+    output=$(curl -X POST -u koala:$PASSWD -F "file=@$1" http://0.0.0.0:7333/)
     echo "$output copied to clipboard."
     wl-copy $output
 }
