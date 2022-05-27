@@ -89,7 +89,7 @@
         "on-click": "pavucontrol"
     },
     "custom/vpn": {
-        "format": "Homelab ",
+        "format": "Homelab  ",
         "exec": "echo '{\"class\": \"connected\"}'",
         "exec-if": "test -d /proc/sys/net/ipv4/conf/homelab",
         "return-type": "json",
