@@ -9,6 +9,7 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+source /usr/share/nvm/init-nvm.sh
 #
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -30,7 +31,7 @@ alias ls='exa --icons --color=auto --group-directories-first'
 alias cat='bat'
 alias open='xdg-open'
 alias vim='nvim'
-alias wttr='curl https://wttr.in/\~Soedertalje\?0m'
+alias wttr='curl https://wttr.in\?0m'
 alias rsync='rsync -v --progress -h --partial -t'
 alias vpnc='nmcli c up homelab'
 alias vpnd='nmcli c down homelab'
