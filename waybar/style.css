@@ -19,22 +19,10 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
-
 #workspaces button {
     padding: 0 5px;
     color: #ebdbb2;
     border-radius: 5px;
-    /* background-color: transparent;
-    border-bottom: 3px solid transparent;
-    */
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -63,14 +51,9 @@ window#waybar.solo {
 
 #clock,
 #battery,
-#cpu,
-#memory,
-#temperature,
 #backlight,
 #network,
 #pulseaudio,
-#custom-media,
-#tray,
 #mode,
 #idle_inhibitor,
 #mpd {
@@ -115,16 +98,6 @@ label:focus {
     background-color: #000000;
 }
 
-#cpu {
-    background-color: #ebdbb2;
-    color: #000000;
-}
-
-#memory {
-    background-color: #ebdbb2;
-    color: #000000;
-}
-
 #backlight {
     background-color: #ebdbb2;
     color: #000000;
@@ -150,38 +123,12 @@ label:focus {
     color: #000000;
 }
 
-#custom-media {
-    background-color: #ebdbb2;
-    color: #282828;
-    min-width: 100px;
-}
-
-#custom-media.custom-spotify {
-    background-color: #66cc99;
-}
-
-#custom-media.custom-vlc {
-    background-color: #ffa000;
-}
-
-#temperature {
-    background-color: #ebdbb2;
-    color: #282828;
-}
-
-#temperature.critical {
-    background-color: #eb4d4b;
-}
-
-#tray {
-    background-color: #ebdbb2;
-}
-
 #idle_inhibitor {
     background-color: rgba(0, 0, 0, 0);
     color: #ebdbb2;
     border-radius: 5px;
     margin-right: 2px;
+    margin-left: 3px;
 }
 
 #idle_inhibitor.activated {
@@ -189,4 +136,5 @@ label:focus {
     color: #282828;
     border-radius: 5px;
     margin-right: 2px;
+    margin-left: 5px;
 }

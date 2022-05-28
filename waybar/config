@@ -31,18 +31,12 @@
             "deactivated": ""
         }
     },
-    "tray": {
-        // "icon-size": 21,
-        "spacing": 0
-    },
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
     "backlight": {
-        // "device": "acpi_video1",
         "format": "{percent}% {icon}",
- 	    //"format-icons": ["🌑","🌒","🌓","🌔","🌕"]
         "format-icons": ["", ""]
     },
     "battery": {
@@ -89,7 +83,7 @@
         "on-click": "pavucontrol"
     },
     "custom/vpn": {
-        "format": "Homelab  ",
+        "format": "Homelab ",
         "exec": "echo '{\"class\": \"connected\"}'",
         "exec-if": "test -d /proc/sys/net/ipv4/conf/homelab",
         "return-type": "json",
