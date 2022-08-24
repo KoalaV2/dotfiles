@@ -10,3 +10,4 @@ allow_images=true
 line_wrap=word_char
 insensitive=true
 term=kitty
+layer=overlay
