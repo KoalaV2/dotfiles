@@ -13,6 +13,8 @@ let g:copilot_filetypes = {
       \ 'txt': v:false,
       \ }
 let g:copilot_no_tab_map = v:true
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 autocmd BufWritePre * :%s/\s\+$//e
 filetype plugin on
@@ -47,7 +49,7 @@ require('luatab').setup{}
 require'lualine'.setup {
   options = {
     theme = 'gruvbox',
-    icons_enabled = false,
+    icons_enabled = true,
     section_separators = ' ',
     component_separators = '|'
   },
@@ -57,7 +59,6 @@ require'nvim-treesitter.configs'.setup {
   sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
   highlight = {
     enable = true,
-    disable = { "html" },  -- list of language that will be disabled
     additional_vim_regex_highlighting = true, -- enable additional highlighting based on vim regexp engine ( Also fixing a odd spellcheck issue. )
   },
 }
