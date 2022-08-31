@@ -1,0 +1,12 @@
+[user]
+	email = theo.johanson@gmail.com
+	name = KoalaV2
+	signingkey = ~/.ssh/id_ed25519_sk.pub
+[commit]
+	gpgsign = true
+[core]
+	excludesfile = /home/theo/.gitignore
+[tag]
+	gpgsign = true
+[gpg]
+	format = ssh
