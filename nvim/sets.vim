@@ -23,3 +23,4 @@ set hidden
 " set spell spelllang=en_us,sv " Set spellcheck language
 set autoindent
 set mouse=a " Enable mouse
+set completeopt=menu,menuone,noselect

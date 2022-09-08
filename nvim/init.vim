@@ -36,6 +36,7 @@ augroup END
 autocmd VimResized * wincmd =
 
 lua <<EOF
+require('lsp')
 require('Comment').setup()
 require('gitsigns').setup{
     keymaps = {} -- Disable keymaps made by gitsigns.
