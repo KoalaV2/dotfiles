@@ -39,7 +39,7 @@ alias ga='git add'
 alias gp='git pull'
 alias gm='git commit'
 alias gpsh='git push'
-alias todo="grep -n TODO *"
+alias todo="grep -n -s TODO *"
 alias ssh="TERM=xterm-256color ssh"
 
 function disc() {
@@ -49,12 +49,6 @@ function disc() {
 function upload() {
     ~/.webpass.sh
     output=$(curl -X POST -u koala:$PASSWD -F "file=@$1" http://130.162.53.121:7333/)
-    echo "$output copied to clipboard."
-    wl-copy $output
-}
-function uploadlocal() {
-    ~/.webpass.sh
-    output=$(curl -X POST -u koala:$PASSWD -F "file=@$1" http://0.0.0.0:7333/)
     echo "$output copied to clipboard."
     wl-copy $output
 }

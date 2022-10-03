@@ -29,8 +29,8 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 
 " Rebind copilot to End and Right arrow key.
-imap <silent><script><expr> <End> copilot#Accept("\<CR>")
-imap <silent><script><expr> <Right> copilot#Accept("\<CR>")
+" imap <silent><script><expr> <End> copilot#Accept("\<CR>")
+" imap <silent><script><expr> <Right> copilot#Accept("\<CR>")
 
 " Fast pane resizing (C-w +/-/>/< and keep tapping/holding to resize)
 nmap          <leader>+     <C-W>+<SID>ws
