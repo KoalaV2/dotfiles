@@ -18,11 +18,12 @@ if has("autocmd")
     \| exe "normal! g'\"" | endif
 endif
 
-" Set scrolloff to 25% of the window height.
+" Set scrolloff to 25% of the window height and sidescrolloff to 25% of the window width:
 augroup VCenterCursor
   au!
   au BufEnter,WinEnter,WinNew,VimResized *,*.*
         \ let &scrolloff=winheight(win_getid())/4
+        \ | let &sidescrolloff=winwidth(win_getid())/4
 augroup END
 
 " Preserving equal sized split view.
