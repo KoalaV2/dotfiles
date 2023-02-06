@@ -2,7 +2,7 @@ source $HOME/.config/nvim/maps.vim
 source $HOME/.config/nvim/sets.vim
 
 colorscheme gruvbox
-let g:copilot_node_command = '/home/theo/.nvm/versions/node/v17.9.0/bin/node'
+" let g:copilot_node_command = '/home/theo/.nvm/versions/node/v17.9.0/bin/node'
 let g:rainbow_active = 1
 let g:indent_blankline_show_first_indent_level = v:false
 " let g:copilot_no_tab_map = v:true
