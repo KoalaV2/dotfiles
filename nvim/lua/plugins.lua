@@ -22,7 +22,6 @@ return require('packer').startup(function(use)
         run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
     }
     use 'nvim-lualine/lualine.nvim'
-    use 'alvarosevilla95/luatab.nvim'
     use 'williamboman/mason.nvim'
     use 'williamboman/mason-lspconfig.nvim'
     use { 'neovim/nvim-lspconfig',
@@ -31,4 +30,5 @@ return require('packer').startup(function(use)
     use 'L3MON4D3/LuaSnip'
     use 'saadparwaiz1/cmp_luasnip'
     use 'andweeb/presence.nvim'
+    use 'akinsho/bufferline.nvim'
 end)

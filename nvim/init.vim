@@ -43,7 +43,17 @@ require("indent_blankline").setup {
     show_current_context_start = true,
 }
 require('nvim-autopairs').setup{}
-require('luatab').setup{}
+require("bufferline").setup{
+    options = {
+        mode = "tabs",
+        -- always_show_bufferline = false,
+        show_buffer_close_icons = false,
+        show_close_icons = false
+    },
+    highlights= {
+        fill = { bg = "#3c3836"}
+        }
+}
 require'lualine'.setup {
   options = {
     theme = 'gruvbox',
@@ -82,8 +92,4 @@ require("presence"):setup({
     workspace_text      = "Working on %s",            -- Format string rendered when in a git repository (either string or function(project_name: string|nil, filename: string): string)
     line_number_text    = "Line %s out of %s",        -- Format string rendered when `enable_line_number` is set to true (either string or function(line_number: number, line_count: number): string)
 })
--- vim.cmd("highlight Normal guibg=none")
--- vim.cmd("highlight NonText guibg=none")
--- vim.cmd("highlight Normal ctermbg=none")
--- vim.cmd("highlight NonText ctermbg=none")
 EOF
