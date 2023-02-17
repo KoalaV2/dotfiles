@@ -1,6 +1,7 @@
 source $HOME/.config/nvim/maps.vim
 source $HOME/.config/nvim/sets.vim
 
+let g:gruvbox_italic=1
 colorscheme gruvbox
 " let g:copilot_node_command = '/home/theo/.nvm/versions/node/v17.9.0/bin/node'
 let g:rainbow_active = 1
@@ -48,7 +49,8 @@ require("bufferline").setup{
         mode = "tabs",
         -- always_show_bufferline = false,
         show_buffer_close_icons = false,
-        show_close_icons = false
+        show_close_icons = false,
+        diagnostics = "nvim_lsp"
     },
     highlights= {
         fill = { bg = "#3c3836"}
