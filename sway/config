@@ -10,7 +10,7 @@ set $term kitty
 set $menu wofi
 
 
-input * {
+input type:keyboard {
     xkb_layout "se"
     xkb_options caps:escape
     xkb_numlock enabled
@@ -86,7 +86,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86Favorites exec bash -c /home/theo/.scripts/togglebluetooth
 bindsym XF86Display exec /bin/sh /home/theo/.scripts/mirrordisplay
-bindsym $mod+S exec /home/theo/.scripts/gettimecli | wofi -d -p $(date +%A)
+bindsym $mod+S exec /home/theo/.scripts/gettimeclirust | wofi -d -p $(date +%A)
 bindsym $mod+P exec clipman pick -t wofi
 floating_modifier $mod normal
 
@@ -191,7 +191,6 @@ exec lxsession &
 exec mako &
 exec udiskie &
 exec wlsunset -l 59.2 -L 17.7 &
-exec kdeconnect-cli -d 686e98ad04425e5b --pair &
 exec systemctl --user import-environment WAYLAND_DISPLAY &
 exec systemctl --user start thinkpadbacklight.service &
 exec systemctl --user start thinkpadbacklight-restart.timer &
@@ -199,6 +198,7 @@ exec systemctl --user start thinkpadbacklight-restart.timer &
 client.focused #ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2
 client.unfocused #453a3a #453a3a #453a3a #453a3a #453a3a
 client.focused_inactive #453a3a #453a3a #453a3a #453a3a #453a3a
+
 
 #border_images.focused /home/theo/.config/sway/shadows.png
 #border_images.focused_inactive /home/theo/.config/sway/shadows.png
