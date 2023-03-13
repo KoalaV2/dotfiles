@@ -31,4 +31,5 @@ return require('packer').startup(function(use)
     use 'saadparwaiz1/cmp_luasnip'
     use 'andweeb/presence.nvim'
     use 'akinsho/bufferline.nvim'
+    use 'rust-lang/rust.vim'
 end)
