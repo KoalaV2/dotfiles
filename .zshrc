@@ -49,7 +49,7 @@ function disc() {
 }
 function upload() {
     ~/.webpass.sh
-    output=$(curl -X POST -u koala:$PASSWD -F "file=@$1" http://130.162.53.121:7333/)
+    output=$(curl -X POST -u koala:$PASSWD -F "file=@$1" http://127.0.0.1:7333/)
     echo "$output copied to clipboard."
     wl-copy $output
 }
