@@ -17,13 +17,13 @@ input type:keyboard {
 }
 
 # Touchscreen
-input "9094:17198:Raydium_Corporation_Raydium_Touch_System" {
+input type:touch {
     map_to_output eDP-1
     #events disabled
 }
 
 # Trackpad
-input "1267:32:Elan_Touchpad" {
+input type:touchpad {
 	tap enabled
 	drag enabled
 	natural_scroll enabled
@@ -51,10 +51,10 @@ bindswitch --reload --locked lid:on output $laptop_screen disable
 
 bindswitch --reload --locked lid:off output $laptop_screen enable
 
-output eDP-1 {
-	pos 0 0
-	resolution 1920x1080
-}
+# output eDP-1 {
+# 	pos 0 0
+# 	resolution 1920x1080
+# }
 output 'Dell Inc. DELL E228WFP DT86779130AM' {
     resolution 1680x1050
 	pos 1920 0
