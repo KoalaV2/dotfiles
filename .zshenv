@@ -19,3 +19,4 @@ export XDG_CURRENT_DESKTOP=sway
 export QT_QPA_PLATFORMTHEME=qt5ct
 export PYENV_ROOT="$HOME/.pyenv"
 export GPGKEY="A48961119519381E"
+export MAKEFLAGS="-j$(expr $(nproc) \+ 1)"
