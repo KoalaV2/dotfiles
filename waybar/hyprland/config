@@ -1,10 +1,10 @@
 {
     "layer": "top",
     "height": 25,
-    "modules-left": ["hyprland/workspaces", "wlr/mode"],
+    "modules-left": ["wlr/workspaces", "wlr/mode"],
     "modules-center": ["hyprland/window"],
     "modules-right": ["custom/vpn","idle_inhibitor", "pulseaudio", "network", "backlight", "battery", "clock"],
-    "hyprland/workspaces": {
+    "wlr/workspaces": {
         "on-click": "activate",
         "disable-scroll": true,
         "all-outputs": true,
@@ -21,6 +21,9 @@
             "9": "9",
             "10": "10"
         }
+    },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
     },
     "idle_inhibitor": {
         "format": "{icon}",
