@@ -62,3 +62,6 @@ bindkey '^R' history-incremental-search-backward
 bindkey -v
 
 zstyle ':bracketed-paste-magic' active-widgets '.self-*'
+
+# # Created by `pipx` on 2023-07-27 00:35:13
+# export PATH="$PATH:/home/theo/.local/bin"
