@@ -3,6 +3,7 @@ source $HOME/.config/nvim/sets.vim
 
 let g:gruvbox_italic=1
 colorscheme gruvbox
+highlight Normal ctermbg=NONE guibg=NONE
 " let g:copilot_node_command = '/home/theo/.nvm/versions/node/v17.9.0/bin/node'
 let g:rainbow_active = 1
 let g:indent_blankline_show_first_indent_level = v:false
@@ -38,13 +39,14 @@ require('lsp')
 require('plugins')
 require('Comment').setup()
 require('gitsigns').setup{
-    keymaps = {} -- Disable keymaps made by gitsigns.
+    -- keymaps = {} -- Disable keymaps made by gitsigns.
 }
-require("indent_blankline").setup {
-    space_char_blankline = " ",
-    show_current_context = true,
-    show_current_context_start = true,
-}
+require("ibl").setup()
+-- {
+--     space_char_blankline = " ",
+--     show_current_context = true,
+--     show_current_context_start = true,
+-- }
 require('nvim-autopairs').setup{}
 require("bufferline").setup{
     options = {
