@@ -22,6 +22,10 @@
             "10": "10"
         }
     },
+    "hyprland/window": {
+        "max-length": 200,
+        "separate-outputs": true
+    },
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {

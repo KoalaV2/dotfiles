@@ -4,6 +4,13 @@ border-color=#282828
 default-timeout=8000
 font=JetBrains Mono 10
 border-radius=10
+sort=-time
+width=300
+height=110
+#on-notify=exec /bin/paplay /usr/share/sounds/freedesktop/stereo/message.oga
+
+[app-name=Pushover]
+on-notify=exec /bin/paplay /usr/share/sounds/freedesktop/stereo/message.oga
 
 [urgency=high]
 border-color=#FF0000
@@ -18,3 +25,4 @@ default-timeout=0
 border-size=4
 layer=overlay
 on-notify=exec /bin/paplay /usr/share/sounds/freedesktop/stereo/dialog-warning.oga
+
