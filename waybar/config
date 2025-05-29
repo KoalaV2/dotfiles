@@ -1,9 +1,9 @@
 {
     "layer": "top",
     "height": 25,
-    "modules-left": ["hyprland/workspaces", "wlr/mode"],
+    "modules-left": ["hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["custom/vpn","idle_inhibitor", "pulseaudio", "network", "backlight", "battery", "clock"],
+    "modules-right": ["custom/vpn","idle_inhibitor", "pulseaudio", "network", "backlight", "battery", "clock","tray"],
     "hyprland/workspaces": {
         "on-click": "activate",
         "disable-scroll": true,
@@ -67,7 +67,7 @@
     },
     "pulseaudio": {
         "scroll-step": 0,
-        "format": "{icon} {volume}    {format_source}",
+        "format": "{icon} {volume}  {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
